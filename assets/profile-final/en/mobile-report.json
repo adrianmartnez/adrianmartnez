@@ -1,0 +1,21 @@
+{
+  "locale": "en",
+  "out": "assets/profile-final/en/mobile.gif",
+  "bytes": 1062623,
+  "mb": 1.013,
+  "width": 400,
+  "height": 859,
+  "tribalSlot": {
+    "width": 340,
+    "height": 243,
+    "crop": {
+      "left": 520,
+      "top": 36,
+      "width": 420,
+      "height": 300
+    }
+  },
+  "frames": 38,
+  "hasNetscapeLoop": false,
+  "note": "Mobile-specific vertical layout; tribal cropped from desktop hero frames (animation algorithm unchanged); callouts shown as compact chip row for legibility."
+}

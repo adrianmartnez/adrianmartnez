@@ -1,0 +1,26 @@
+{
+  "en": {
+    "locale": "en",
+    "out": "assets/profile-final/en/desktop.gif",
+    "bytes": 1279578,
+    "mb": 1.22,
+    "width": 1100,
+    "height": 660,
+    "heroHeight": 380,
+    "contentHeight": 280,
+    "frames": 38,
+    "hasNetscapeLoop": false
+  },
+  "es": {
+    "locale": "es",
+    "out": "assets/profile-final/es/desktop.gif",
+    "bytes": 1386921,
+    "mb": 1.323,
+    "width": 1100,
+    "height": 716,
+    "heroHeight": 380,
+    "contentHeight": 336,
+    "frames": 39,
+    "hasNetscapeLoop": false
+  }
+}
