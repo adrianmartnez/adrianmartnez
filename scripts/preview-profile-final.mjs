@@ -38,11 +38,11 @@ function page(locale) {
 </head>
 <body>
   <div class="wrap">
-    <p class="note">Candidate · mobile≤520 · intermediate≤900 · desktop&gt;900</p>
+    <p class="note">Candidate · mobile≤480 · intermediate≤850 · desktop&gt;850</p>
     <div class="nav"><a href="/">EN</a> · <a href="/es">ES</a></div>
     <picture>
-      <source media="(max-width: 520px)" srcset="${base}/mobile-v2.gif" />
-      <source media="(max-width: 900px)" srcset="${base}/intermediate.gif" />
+      <source media="(max-width: 480px)" srcset="${base}/mobile-v2.gif" />
+      <source media="(max-width: 850px)" srcset="${base}/intermediate.gif" />
       <img src="${base}/desktop.gif" alt="Profile canvas" width="100%" />
     </picture>
     <div class="links"><a href="https://adrianmartnez.dev">Portfolio</a> · <a href="https://www.linkedin.com/in/adrian-martinez-martin">LinkedIn</a></div>

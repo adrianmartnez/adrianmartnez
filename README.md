@@ -1,7 +1,9 @@
 <!--
   Profile README — seamless responsive canvas.
-  Variants: mobile-v2 (≤520) · intermediate (≤900) · desktop (>900).
-  Real links outside the canvas. Breakpoints based on GitHub content-slot measurements.
+  Variants by GitHub content-slot measurements:
+  - mobile-v2   ≤480px viewport (phone; scale ~0.64–1.04)
+  - intermediate ≤850px (tablet/mid; avoids mobile 1.5× blow-up)
+  - desktop     >850px
 -->
 <div align="right">
 <a href="./README.md"><strong>EN</strong></a>
@@ -11,8 +13,8 @@
 
 <div align="center">
 <picture>
-<source media="(max-width: 520px)" srcset="./assets/profile-final/en/mobile-v2.gif" />
-<source media="(max-width: 900px)" srcset="./assets/profile-final/en/intermediate.gif" />
+<source media="(max-width: 480px)" srcset="./assets/profile-final/en/mobile-v2.gif" />
+<source media="(max-width: 850px)" srcset="./assets/profile-final/en/intermediate.gif" />
 <img src="./assets/profile-final/en/desktop.gif" alt="Adrián Martínez Martín — Data Governance Engineer. 6+ years in product data integration, quality, and automation; focused on Data Governance. Technical stack: Python, SQL, PostgreSQL, Collibra, Microsoft Purview, APIs, Docker, CI/CD." width="100%" />
 </picture>
 </div>

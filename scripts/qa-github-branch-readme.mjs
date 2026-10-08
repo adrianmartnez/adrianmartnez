@@ -14,7 +14,7 @@ const puppeteer = require('puppeteer');
 
 const URL =
   'https://github.com/adrianmartnez/adrianmartnez/blob/fix/seamless-responsive-profile/README.md';
-const widths = [320, 375, 400, 480, 520, 600, 670, 768, 900, 1200];
+const widths = [320, 375, 400, 480, 600, 670, 768, 900, 1200];
 
 const browser = await puppeteer.launch({
   headless: true,
@@ -44,8 +44,8 @@ for (const w of widths) {
     else if (src.includes('desktop')) variant = 'desktop';
     return {
       viewport: window.innerWidth,
-      match520: window.matchMedia('(max-width: 520px)').matches,
-      match900: window.matchMedia('(max-width: 900px)').matches,
+      match480: window.matchMedia('(max-width: 480px)').matches,
+      match850: window.matchMedia('(max-width: 850px)').matches,
       sources,
       variant,
       currentSrc: src,
