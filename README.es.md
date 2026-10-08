@@ -1,8 +1,34 @@
 <!--
   GitHub Profile README (ES).
-  Cabecera = fill + EN/ES en % (una sola línea en GitHub).
-  Un único bloque centrado para el lienzo negro continuo.
+  Módulo negro continuo: tabla sin gaps + bgcolor #000.
+  EN/ES = tiles compactos (sin imagen de relleno → evita wrap y banda flotante).
+  body.svg = Perfil + Tecnologías + Contacto en una superficie.
+  Portfolio / LinkedIn siguen siendo enlaces independientes.
 -->
-<p align="center">
-<img src="./assets/readme/es/header-fill.svg" width="89.818%" height="28" alt="" /><a href="./README.md"><img src="./assets/readme/es/lang-en.svg" width="5.091%" height="28" alt="EN" /></a><a href="./README.es.md"><img src="./assets/readme/es/lang-es.svg" width="5.091%" height="28" alt="ES" /></a><img src="./assets/tribal/profile-hero.es.gif" alt="Adrián Martínez Martín — Data Governance Engineer" width="100%" /><img src="./assets/readme/es/about.svg" alt="01 / PERFIL — Más de seis años en integración, calidad y automatización; enfoque en Data Governance" width="100%" /><img src="./assets/readme/es/work-header.svg" alt="02 / PROYECTOS DESTACADOS" width="100%" /><a href="https://github.com/adrianmartnez/collibra-governance-automation"><img src="./assets/readme/es/project-collibra.svg" alt="Collibra Governance Automation — Provider SDK, Linaje e impacto, Reconciliación segura" width="100%" /></a><a href="https://github.com/adrianmartnez/purview-governance-automation"><img src="./assets/readme/es/project-purview.svg" alt="Microsoft Purview Governance Automation — Unified Catalog, Escaneo y clasificación, Aplicación controlada" width="100%" /></a><a href="https://github.com/adrianmartnez/governance-provider-example"><img src="./assets/readme/es/project-provider.svg" alt="Governance Provider Example — descubrimiento y conformidad SDK API 1" width="100%" /></a><img src="./assets/readme/es/stack.svg" alt="03 / TECNOLOGÍAS — Python, SQL, PostgreSQL, Collibra, Microsoft Purview, APIs, Docker, CI/CD" width="100%" /><img src="./assets/readme/es/connect-header.svg" alt="04 / CONTACTO" width="100%" /><a href="https://adrianmartnez.dev"><img src="./assets/readme/es/connect-portfolio.svg" alt="Portfolio — adrianmartnez.dev" width="100%" /></a><a href="https://www.linkedin.com/in/adrian-martinez-martin"><img src="./assets/readme/es/connect-linkedin.svg" alt="LinkedIn — adrian-martinez-martin" width="100%" /></a>
-</p>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="right" bgcolor="#000000">
+<a href="./README.md"><img src="./assets/readme/es/lang-en.svg" width="44" height="20" alt="EN" /></a><a href="./README.es.md"><img src="./assets/readme/es/lang-es.svg" width="44" height="20" alt="ES" /></a>
+</td>
+</tr>
+<tr>
+<td bgcolor="#000000">
+<img src="./assets/tribal/profile-hero.es.gif" alt="Adrián Martínez Martín — Data Governance Engineer" width="100%" />
+</td>
+</tr>
+<tr>
+<td bgcolor="#000000">
+<img src="./assets/readme/es/body.svg" alt="01 / PERFIL — Más de seis años en integración, calidad y automatización; enfoque en Data Governance. 02 / TECNOLOGÍAS — Python, SQL, PostgreSQL, Collibra, Microsoft Purview, APIs, Docker, CI/CD. 03 / CONTACTO" width="100%" />
+</td>
+</tr>
+<tr>
+<td bgcolor="#000000">
+<a href="https://adrianmartnez.dev"><img src="./assets/readme/es/connect-portfolio.svg" alt="Portfolio — adrianmartnez.dev" width="100%" /></a>
+</td>
+</tr>
+<tr>
+<td bgcolor="#000000">
+<a href="https://www.linkedin.com/in/adrian-martinez-martin"><img src="./assets/readme/es/connect-linkedin.svg" alt="LinkedIn — adrian-martinez-martin" width="100%" /></a>
+</td>
+</tr>
+</table>

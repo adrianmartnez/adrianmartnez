@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="324" viewBox="0 0 1100 324" role="img" aria-label="01 / ABOUT | 02 / TECHNICAL STACK | 03 / CONNECT">
+  <title>01 / ABOUT | 02 / TECHNICAL STACK | 03 / CONNECT</title>
+  <rect width="1100" height="324" fill="#000000"/>
+  <text x="40" y="24" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="12" letter-spacing="0.08em">01 / ABOUT</text>
+  <text x="40" y="56" fill="#ececea" font-family="system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="18" letter-spacing="-0.012em">6+ years working with product data integration, quality, and automation using Python, SQL/PostgreSQL, and APIs.</text>
+  <text x="40" y="96" fill="#ececea" font-family="system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="18" letter-spacing="-0.012em">I now apply that experience to Data Governance, focusing on metadata, data quality, lineage, and traceability.</text>
+  <line x1="40" y1="152" x2="1060" y2="152" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+  <text x="40" y="184" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="12" letter-spacing="0.08em">02 / TECHNICAL STACK</text>
+  <text x="40" y="216" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="12" letter-spacing="0.06em">LANGUAGES</text>
+  <text x="40" y="240" fill="#ececea" font-family="system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="15">Python · SQL</text>
+  <text x="295" y="216" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="12" letter-spacing="0.06em">DATA</text>
+  <text x="295" y="240" fill="#ececea" font-family="system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="15">PostgreSQL</text>
+  <text x="550" y="216" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="12" letter-spacing="0.06em">PLATFORMS</text>
+  <text x="550" y="240" fill="#ececea" font-family="system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="15">Collibra · Microsoft Purview</text>
+  <text x="805" y="216" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="12" letter-spacing="0.06em">ENGINEERING</text>
+  <text x="805" y="240" fill="#ececea" font-family="system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="15">APIs · Docker · CI/CD</text>
+  <line x1="40" y1="268" x2="1060" y2="268" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+  <text x="40" y="300" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="12" letter-spacing="0.08em">03 / CONNECT</text>
+</svg>
