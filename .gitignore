@@ -19,10 +19,15 @@ Desktop.ini
 
 # Capture / QA intermediates (keep hero-capture*.html)
 scripts/capture/frames/
+scripts/capture/profile-final-desktop/
+scripts/capture/profile-final-mobile/
+scripts/capture/profile-final-intermediate/
 scripts/capture/tribal-build.json
 scripts/capture/capture-report.json
 scripts/capture/layout-v2.json
 scripts/capture/qa-report.json
+scripts/capture/simple-*.png
+scripts/capture/simple-qa-report.json
 scripts/capture/preview-*.png
 scripts/capture/qa-*.png
 scripts/capture/qa-gif-*.png
@@ -33,6 +38,9 @@ scripts/capture/connector-*.png
 scripts/capture/final-*.png
 scripts/capture/micro-*.png
 scripts/capture/spacing-*.png
+
+# Local evidence / screenshots (not for main)
+evidence/
 
 # Backups
 *.bak

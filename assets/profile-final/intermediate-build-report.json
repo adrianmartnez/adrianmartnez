@@ -1,0 +1,50 @@
+{
+  "en": {
+    "locale": "en",
+    "out": "assets/profile-final/en/intermediate.gif",
+    "bytes": 1659475,
+    "mb": 1.583,
+    "width": 680,
+    "height": 1017,
+    "type": {
+      "name": 34,
+      "role": 24,
+      "gac": 18,
+      "section": 16,
+      "about": 22,
+      "stackLabel": 15,
+      "stackValue": 20
+    },
+    "metrics": {
+      "rootH": 1018,
+      "tribalTop": 172,
+      "tribalLeft": 80
+    },
+    "frames": 38,
+    "hasNetscapeLoop": false
+  },
+  "es": {
+    "locale": "es",
+    "out": "assets/profile-final/es/intermediate.gif",
+    "bytes": 1789160,
+    "mb": 1.706,
+    "width": 680,
+    "height": 1079,
+    "type": {
+      "name": 34,
+      "role": 24,
+      "gac": 18,
+      "section": 16,
+      "about": 22,
+      "stackLabel": 15,
+      "stackValue": 20
+    },
+    "metrics": {
+      "rootH": 1079,
+      "tribalTop": 172,
+      "tribalLeft": 80
+    },
+    "frames": 39,
+    "hasNetscapeLoop": false
+  }
+}

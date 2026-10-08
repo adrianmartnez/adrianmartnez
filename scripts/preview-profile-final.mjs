@@ -1,5 +1,5 @@
 /**
- * Local preview for profile-final candidates + picture element.
+ * Local preview for profile-final candidates (mobile / intermediate / desktop).
  */
 import { createServer } from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
@@ -25,12 +25,12 @@ function page(locale) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Profile final candidate — ${isEs ? 'ES' : 'EN'}</title>
+<title>Profile final — ${isEs ? 'ES' : 'EN'}</title>
 <style>
   html,body{margin:0;background:#0d1117;color:#c9d1d9;font:14px/1.4 ui-monospace,Consolas,monospace;}
   .wrap{max-width:900px;margin:0 auto;padding:16px 12px 48px;}
-  .nav,.links{text-align:right;margin:0 0 8px;}
-  .links{text-align:center;margin-top:12px;}
+  .nav{text-align:right;margin:0 0 8px;}
+  .links{text-align:center;margin:10px 0 0;}
   a{color:#58a6ff;}
   picture,img{display:block;width:100%;background:#000;}
   .note{color:#8b949e;margin:0 0 12px;font-size:12px;}
@@ -38,13 +38,14 @@ function page(locale) {
 </head>
 <body>
   <div class="wrap">
-    <p class="note">Candidate preview · seamless canvas · &lt;picture max-width:768px&gt;</p>
-    <div class="nav" align="right"><a href="/">EN</a> · <a href="/es">ES</a></div>
+    <p class="note">Candidate · mobile≤520 · intermediate≤900 · desktop&gt;900</p>
+    <div class="nav"><a href="/">EN</a> · <a href="/es">ES</a></div>
     <picture>
-      <source media="(max-width: 768px)" srcset="${base}/mobile-v2.gif" />
+      <source media="(max-width: 520px)" srcset="${base}/mobile-v2.gif" />
+      <source media="(max-width: 900px)" srcset="${base}/intermediate.gif" />
       <img src="${base}/desktop.gif" alt="Profile canvas" width="100%" />
     </picture>
-    <div class="links" align="center"><a href="https://adrianmartnez.dev">Portfolio</a> · <a href="https://www.linkedin.com/in/adrian-martinez-martin">LinkedIn</a></div>
+    <div class="links"><a href="https://adrianmartnez.dev">Portfolio</a> · <a href="https://www.linkedin.com/in/adrian-martinez-martin">LinkedIn</a></div>
     <pre id="diag" class="note"></pre>
   </div>
   <script>
@@ -55,6 +56,8 @@ function page(locale) {
         viewport: window.innerWidth,
         currentSrc: img.currentSrc,
         natural: { w: img.naturalWidth, h: img.naturalHeight },
+        displayed: { w: Math.round(img.getBoundingClientRect().width), h: Math.round(img.getBoundingClientRect().height) },
+        scale: +(img.getBoundingClientRect().width / img.naturalWidth).toFixed(3),
       }, null, 2);
     }
     img.addEventListener('load', report);
@@ -83,7 +86,10 @@ createServer((req, res) => {
     res.end('not found');
     return;
   }
-  res.writeHead(200, { 'Content-Type': MIME[extname(filePath)] || 'application/octet-stream', 'Cache-Control': 'no-store' });
+  res.writeHead(200, {
+    'Content-Type': MIME[extname(filePath)] || 'application/octet-stream',
+    'Cache-Control': 'no-store',
+  });
   res.end(readFileSync(filePath));
 }).listen(PORT, '127.0.0.1', () => {
   console.log(`READY http://127.0.0.1:${PORT} | /es`);
