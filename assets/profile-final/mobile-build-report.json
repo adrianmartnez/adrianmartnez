@@ -20,10 +20,10 @@
     "en": {
       "locale": "en",
       "out": "assets/profile-final/en/mobile-v2.gif",
-      "bytes": 745950,
-      "mb": 0.711,
+      "bytes": 743966,
+      "mb": 0.71,
       "width": 400,
-      "height": 1296,
+      "height": 1261,
       "typePrevious": {
         "name": 22,
         "role": 14,
@@ -42,7 +42,7 @@
         "stackValue": 25
       },
       "metrics": {
-        "rootH": 1297,
+        "rootH": 1261,
         "tribalTop": 167,
         "tribalLeft": 22,
         "nameFs": "32px",
@@ -51,7 +51,7 @@
           {
             "fontSize": "26px",
             "lineHeight": "35.88px",
-            "height": 179
+            "height": 144
           },
           {
             "fontSize": "26px",
@@ -82,8 +82,8 @@
     "es": {
       "locale": "es",
       "out": "assets/profile-final/es/mobile-v2.gif",
-      "bytes": 791300,
-      "mb": 0.755,
+      "bytes": 787526,
+      "mb": 0.751,
       "width": 400,
       "height": 1296,
       "typePrevious": {

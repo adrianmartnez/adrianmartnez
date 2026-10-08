@@ -12,7 +12,7 @@
 <picture>
 <source media="(max-width: 480px)" srcset="./assets/profile-final/es/mobile-v2.gif" />
 <source media="(max-width: 850px)" srcset="./assets/profile-final/es/intermediate.gif" />
-<img src="./assets/profile-final/es/desktop.gif" alt="Adrián Martínez Martín — Data Governance Engineer. Más de seis años en integración, calidad y automatización; enfoque en Data Governance. Tecnologías: Python, SQL, PostgreSQL, Collibra, Microsoft Purview, APIs, Docker, CI/CD." width="100%" />
+<img src="./assets/profile-final/es/desktop.gif" alt="Adrián Martínez Martín — Data Governance Engineer. Siete años en integración, calidad y automatización; enfoque en Data Governance. Tecnologías: Python, SQL, PostgreSQL, Collibra, Microsoft Purview, APIs, Docker, CI/CD." width="100%" />
 </picture>
 </div>
 

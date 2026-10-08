@@ -82,7 +82,7 @@ const copy = {
     gac: '> governance-as-code',
     aboutLabel: '01 / ABOUT',
     about: [
-      '6+ years working with product data integration, quality, and automation using Python, SQL/PostgreSQL, and APIs.',
+      '7 years working with product data integration, quality, and automation using Python, SQL/PostgreSQL, and APIs.',
       'I now apply that experience to Data Governance, focusing on metadata, data quality, lineage, and traceability.',
     ],
     stackLabel: '02 / TECHNICAL STACK',
@@ -101,7 +101,7 @@ const copy = {
     gac: '> governance-as-code',
     aboutLabel: '01 / PERFIL',
     about: [
-      'Más de seis años trabajando con integración, calidad y automatización de datos de producto mediante Python, SQL/PostgreSQL y APIs.',
+      'Siete años trabajando con integración, calidad y automatización de datos de producto mediante Python, SQL/PostgreSQL y APIs.',
       'Actualmente enfoco esa experiencia hacia Data Governance, especialmente metadatos, calidad del dato, linaje y trazabilidad.',
     ],
     stackLabel: '02 / TECNOLOGÍAS',

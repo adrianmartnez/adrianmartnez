@@ -3,7 +3,7 @@
   <title>01 / ABOUT | 02 / TECHNICAL STACK | 03 / CONNECT</title>
   <rect width="1100" height="324" fill="#000000"/>
   <text x="40" y="24" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="12" letter-spacing="0.08em">01 / ABOUT</text>
-  <text x="40" y="56" fill="#ececea" font-family="system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="18" letter-spacing="-0.012em">6+ years working with product data integration, quality, and automation using Python, SQL/PostgreSQL, and APIs.</text>
+  <text x="40" y="56" fill="#ececea" font-family="system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="18" letter-spacing="-0.012em">7 years working with product data integration, quality, and automation using Python, SQL/PostgreSQL, and APIs.</text>
   <text x="40" y="96" fill="#ececea" font-family="system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="18" letter-spacing="-0.012em">I now apply that experience to Data Governance, focusing on metadata, data quality, lineage, and traceability.</text>
   <line x1="40" y1="152" x2="1060" y2="152" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
   <text x="40" y="184" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="12" letter-spacing="0.08em">02 / TECHNICAL STACK</text>

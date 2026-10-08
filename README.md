@@ -15,7 +15,7 @@
 <picture>
 <source media="(max-width: 480px)" srcset="./assets/profile-final/en/mobile-v2.gif" />
 <source media="(max-width: 850px)" srcset="./assets/profile-final/en/intermediate.gif" />
-<img src="./assets/profile-final/en/desktop.gif" alt="Adrián Martínez Martín — Data Governance Engineer. 6+ years in product data integration, quality, and automation; focused on Data Governance. Technical stack: Python, SQL, PostgreSQL, Collibra, Microsoft Purview, APIs, Docker, CI/CD." width="100%" />
+<img src="./assets/profile-final/en/desktop.gif" alt="Adrián Martínez Martín — Data Governance Engineer. 7 years in product data integration, quality, and automation; focused on Data Governance. Technical stack: Python, SQL, PostgreSQL, Collibra, Microsoft Purview, APIs, Docker, CI/CD." width="100%" />
 </picture>
 </div>
 

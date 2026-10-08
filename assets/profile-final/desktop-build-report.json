@@ -2,8 +2,8 @@
   "en": {
     "locale": "en",
     "out": "assets/profile-final/en/desktop.gif",
-    "bytes": 1279578,
-    "mb": 1.22,
+    "bytes": 1275785,
+    "mb": 1.217,
     "width": 1100,
     "height": 660,
     "heroHeight": 380,
@@ -14,8 +14,8 @@
   "es": {
     "locale": "es",
     "out": "assets/profile-final/es/desktop.gif",
-    "bytes": 1386921,
-    "mb": 1.323,
+    "bytes": 1376380,
+    "mb": 1.313,
     "width": 1100,
     "height": 716,
     "heroHeight": 380,
