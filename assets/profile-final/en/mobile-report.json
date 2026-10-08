@@ -1,10 +1,10 @@
 {
   "locale": "en",
   "out": "assets/profile-final/en/mobile-v2.gif",
-  "bytes": 1603465,
-  "mb": 1.529,
+  "bytes": 745950,
+  "mb": 0.711,
   "width": 400,
-  "height": 1298,
+  "height": 1296,
   "typePrevious": {
     "name": 22,
     "role": 14,
@@ -23,7 +23,7 @@
     "stackValue": 25
   },
   "metrics": {
-    "rootH": 1299,
+    "rootH": 1297,
     "tribalTop": 167,
     "tribalLeft": 22,
     "nameFs": "32px",
@@ -43,18 +43,19 @@
   },
   "tribalSlot": {
     "width": 356,
-    "height": 254,
-    "crop": {
-      "left": 520,
-      "top": 36,
-      "width": 420,
-      "height": 300
+    "height": 252,
+    "source": "assets/tribal/tribal-only.gif",
+    "natural": {
+      "width": 480,
+      "height": 340
     }
   },
-  "frames": 38,
+  "frames": 18,
   "hasNetscapeLoop": false,
   "removedFromMobile": [
-    "callout chip row",
+    "desktop hero crop",
+    "callouts",
+    "connectors",
     "eyebrow metadata strip",
     "multi-term secondary list"
   ]

@@ -6,7 +6,10 @@
     "hero:svg": "node scripts/build-profile-hero-svg.mjs",
     "hero:prepare": "node scripts/prepare-hero-capture-data.mjs",
     "hero:capture": "node scripts/capture-profile-hero.mjs",
-    "hero:build": "npm run hero:svg && npm run hero:prepare && npm run hero:capture"
+    "hero:build": "npm run hero:svg && npm run hero:prepare && npm run hero:capture",
+    "tribal:only": "npm run hero:prepare && node scripts/capture-tribal-only.mjs",
+    "profile:mobile": "node scripts/build-profile-final-mobile.mjs",
+    "profile:intermediate": "node scripts/build-profile-final-intermediate.mjs"
   },
   "devDependencies": {
     "@fontsource/cascadia-mono": "^5.3.0",

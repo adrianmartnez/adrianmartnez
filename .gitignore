@@ -19,10 +19,12 @@ Desktop.ini
 
 # Capture / QA intermediates (keep hero-capture*.html)
 scripts/capture/frames/
+scripts/capture/tribal-only-frames/
 scripts/capture/profile-final-desktop/
 scripts/capture/profile-final-mobile/
 scripts/capture/profile-final-intermediate/
 scripts/capture/tribal-build.json
+scripts/capture/tribal-only-report.json
 scripts/capture/capture-report.json
 scripts/capture/layout-v2.json
 scripts/capture/qa-report.json

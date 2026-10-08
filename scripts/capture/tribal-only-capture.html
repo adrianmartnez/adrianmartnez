@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Isolated tribal capture</title>
+    <style>
+      @font-face {
+        font-family: 'Cascadia Mono';
+        font-style: normal;
+        font-display: block;
+        font-weight: 400;
+        src: url('/fonts/cascadia-mono-latin-400-normal.woff2') format('woff2');
+      }
+
+      :root {
+        --paper: #000000;
+        --ink: #ffffff;
+        --font-mono: 'Cascadia Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Monaco,
+          Consolas, 'Liberation Mono', monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        overflow: hidden;
+      }
+
+      #frame {
+        width: 480px;
+        height: 340px;
+        background: var(--paper);
+        display: grid;
+        place-items: center;
+        padding: 28px;
+      }
+
+      .hero-tribal-artbox {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        display: grid;
+        place-items: center;
+        overflow: visible;
+      }
+
+      .hero-tribal {
+        margin: 0;
+        padding: 0;
+        color: var(--ink);
+        background: transparent;
+        white-space: pre;
+        font-variant-ligatures: none;
+        font-feature-settings: 'liga' 0;
+        letter-spacing: 0;
+        line-height: 1.2;
+        user-select: none;
+        pointer-events: none;
+        overflow: visible;
+        max-width: 100%;
+        font-family: var(--font-mono);
+        font-size: 5.6px;
+        position: relative;
+        z-index: 0;
+        justify-self: center;
+      }
+
+      .hero-tribal[data-tribal-pending] {
+        visibility: hidden;
+      }
+
+      .hero-tribal__g {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        letter-spacing: inherit;
+        font: inherit;
+        line-height: inherit;
+        color: inherit;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="frame" data-capture-root>
+      <div class="hero-tribal-artbox">
+        <pre class="hero-tribal" data-hero-tribal data-tribal-pending aria-hidden="true"></pre>
+      </div>
+    </div>
+
+    <script type="module">
+      const BRAILLE_BLANK = '\u2800';
+
+      function escapeHtml(ch) {
+        if (ch === '&') return '&amp;';
+        if (ch === '<') return '&lt;';
+        if (ch === '>') return '&gt;';
+        return ch;
+      }
+
+      function maskToChar(mask) {
+        return String.fromCodePoint(0x2800 + (mask & 0xff));
+      }
+
+      function buildGlyphHtml(grid, inkCount) {
+        const lines = [];
+        let glyphIndex = 0;
+        for (let r = 0; r < grid.length; r++) {
+          let line = '';
+          for (let c = 0; c < grid[r].length; c++) {
+            const ch = grid[r][c];
+            if (ch === ' ' || ch === '\t' || ch === '\u2800' || (ch.length > 0 && /^\s$/.test(ch))) {
+              line += escapeHtml(ch);
+              continue;
+            }
+            line += `<span class="hero-tribal__g" data-gi="${glyphIndex}" data-r="${r}" data-c="${c}" data-ch="${escapeHtml(ch)}">${escapeHtml(ch)}</span>`;
+            glyphIndex += 1;
+          }
+          lines.push(line);
+        }
+        if (glyphIndex !== inkCount) {
+          throw new Error(`ink mismatch: html=${glyphIndex} plan=${inkCount}`);
+        }
+        return lines.join('\n');
+      }
+
+      function fitTribalWidth(tribal) {
+        const artbox = tribal.closest('.hero-tribal-artbox');
+        const avail = artbox?.clientWidth ?? 0;
+        if (avail < 16) return;
+        const base = parseFloat(getComputedStyle(tribal).fontSize) || 5.6;
+        tribal.style.fontSize = '';
+        const natural = tribal.scrollWidth;
+        if (!(natural > 0)) return;
+        const next = natural <= avail + 0.5 ? base : Math.max(2.4, (base * avail) / natural);
+        tribal.style.fontSize = `${next}px`;
+      }
+
+      async function runTribalBuild(tribal, events) {
+        const spans = [...tribal.querySelectorAll('.hero-tribal__g')];
+        for (const s of spans) s.textContent = BRAILLE_BLANK;
+        tribal.removeAttribute('data-tribal-pending');
+        tribal.setAttribute('data-tribal-ready', '1');
+        fitTribalWidth(tribal);
+        tribal.classList.add('is-tribal-revealing');
+        tribal.classList.remove('is-tribal-complete');
+
+        let eventIndex = 0;
+        const startMs = performance.now();
+
+        await new Promise((resolve) => {
+          const frame = (now) => {
+            const elapsed = now - startMs;
+            const pending = new Map();
+            while (eventIndex < events.length && events[eventIndex][0] <= elapsed) {
+              const [, gi, mask] = events[eventIndex];
+              pending.set(gi, mask);
+              eventIndex += 1;
+            }
+            for (const [gi, mask] of pending) {
+              const span = spans[gi];
+              if (span) span.textContent = maskToChar(mask);
+            }
+            if (eventIndex >= events.length) {
+              for (const s of spans) {
+                const ch = s.getAttribute('data-ch');
+                if (ch != null) s.textContent = ch;
+              }
+              tribal.classList.add('is-tribal-complete');
+              tribal.classList.remove('is-tribal-revealing');
+              resolve();
+              return;
+            }
+            requestAnimationFrame(frame);
+          };
+          requestAnimationFrame(frame);
+        });
+      }
+
+      const data = await fetch('./tribal-build.json').then((r) => r.json());
+      const tribal = document.querySelector('[data-hero-tribal]');
+      tribal.innerHTML = buildGlyphHtml(data.grid, data.inkCount);
+      tribal.style.setProperty('--tribal-prop-ms', `${data.propagationMs}ms`);
+
+      for (const el of tribal.querySelectorAll('.hero-tribal__g')) {
+        if (!el.getAttribute('data-ch')) el.setAttribute('data-ch', el.textContent || '');
+        el.textContent = BRAILLE_BLANK;
+      }
+      tribal.setAttribute('data-tribal-ready', '1');
+      tribal.removeAttribute('data-tribal-pending');
+
+      if (document.fonts?.load) {
+        try {
+          await document.fonts.load("400 5.6px 'Cascadia Mono'");
+        } catch (_) {}
+      }
+      if (document.fonts?.ready) {
+        await document.fonts.ready.catch(() => {});
+      }
+      fitTribalWidth(tribal);
+
+      const fontMono = getComputedStyle(tribal).fontFamily;
+      window.__heroCapture = {
+        ready: true,
+        done: false,
+        mode: 'tribal-only',
+        propagationMs: data.propagationMs,
+        inkCount: data.inkCount,
+        events: data.events.length,
+        fontMono,
+      };
+      document.documentElement.dataset.captureReady = '1';
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(async () => {
+          const origin = performance.now();
+          await runTribalBuild(tribal, data.events);
+          const total = Math.round(performance.now() - origin);
+          window.__heroCapture = {
+            ...window.__heroCapture,
+            done: true,
+            tribalCompleteMs: total,
+            totalDurationMs: total,
+          };
+          document.documentElement.dataset.captureDone = '1';
+        });
+      });
+    </script>
+  </body>
+</html>

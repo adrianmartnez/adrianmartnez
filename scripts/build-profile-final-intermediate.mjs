@@ -1,6 +1,7 @@
 /**
  * Intermediate seamless profile GIF (~680px).
  * For tablet / mid viewports where mobile-v2 would upscale >~1.1×.
+ * Uses isolated tribal (no callouts) — same source as mobile.
  * Does NOT modify mobile-v2 or desktop assets.
  */
 import { createRequire } from 'node:module';
@@ -23,7 +24,8 @@ const { GIFEncoder, quantize, applyPalette } = gifenc;
 const W = 680;
 const SAFE = 28;
 const TRIBAL_W = 520;
-const CROP = { left: 520, top: 36, width: 420, height: 300 };
+/** Isolated Braille tribal GIF (no callouts / connectors / labels). */
+const TRIBAL_SRC = 'assets/tribal/tribal-only.gif';
 
 const TYPE = {
   name: 34,
@@ -57,7 +59,7 @@ const FONT_MAP = {
 
 const copy = {
   en: {
-    hero: 'assets/tribal/profile-hero.gif',
+    tribal: TRIBAL_SRC,
     out: 'assets/profile-final/en/intermediate.gif',
     name: 'Adrián Martínez Martín',
     role: 'Data Governance Engineer',
@@ -76,7 +78,7 @@ const copy = {
     ],
   },
   es: {
-    hero: 'assets/tribal/profile-hero.es.gif',
+    tribal: TRIBAL_SRC,
     out: 'assets/profile-final/es/intermediate.gif',
     name: 'Adrián Martínez Martín',
     role: 'Data Governance Engineer',
@@ -274,7 +276,7 @@ async function encodeGif(framePaths, delayCs) {
   return Buffer.from(gif.bytes());
 }
 
-async function extractHeroFrames(gifPath, outDir) {
+async function extractTribalFrames(gifPath, outDir) {
   mkdirSync(outDir, { recursive: true });
   for (const f of readdirSync(outDir)) rmSync(join(outDir, f), { force: true });
   const meta = await sharp(gifPath, { animated: true, pages: -1 }).metadata();
@@ -317,16 +319,20 @@ async function renderChrome(browser, port, c, tribalSlotH, outPng) {
 
 async function buildLocale(browser, port, locale) {
   const c = copy[locale];
-  const heroPath = join(root, c.hero);
-  if (!existsSync(heroPath)) throw new Error(`Missing ${heroPath}`);
+  const tribalPath = join(root, c.tribal);
+  if (!existsSync(tribalPath)) throw new Error(`Missing ${tribalPath} — run capture-tribal-only.mjs`);
 
-  const tribalSlotH = Math.round((TRIBAL_W / CROP.width) * CROP.height);
+  const tribalMeta = await sharp(tribalPath, { animated: true, pages: 1 }).metadata();
+  const natW = tribalMeta.width || 480;
+  const natH = tribalMeta.pageHeight || tribalMeta.height || 340;
+  const tribalSlotH = Math.round((TRIBAL_W / natW) * natH);
+
   const workDir = join(root, 'scripts/capture/profile-final-intermediate', locale);
   mkdirSync(workDir, { recursive: true });
   const chromePng = join(workDir, 'chrome.png');
   const metrics = await renderChrome(browser, port, c, tribalSlotH, chromePng);
 
-  const { paths, delayCs } = await extractHeroFrames(heroPath, join(workDir, 'hero-frames'));
+  const { paths, delayCs } = await extractTribalFrames(tribalPath, join(workDir, 'tribal-frames'));
   const composedDir = join(workDir, 'composed');
   mkdirSync(composedDir, { recursive: true });
   for (const f of readdirSync(composedDir)) rmSync(join(composedDir, f), { force: true });
@@ -335,8 +341,7 @@ async function buildLocale(browser, port, locale) {
   const composed = [];
   for (let i = 0; i < paths.length; i += 1) {
     const tribal = await sharp(paths[i])
-      .extract(CROP)
-      .resize(TRIBAL_W, tribalSlotH, { fit: 'fill' })
+      .resize(TRIBAL_W, tribalSlotH, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 1 } })
       .png()
       .toBuffer();
     const out = join(composedDir, `frame-${String(i).padStart(4, '0')}.png`);
@@ -361,6 +366,12 @@ async function buildLocale(browser, port, locale) {
     height: chromeMeta.height,
     type: TYPE,
     metrics,
+    tribalSlot: {
+      width: TRIBAL_W,
+      height: tribalSlotH,
+      source: TRIBAL_SRC,
+      natural: { width: natW, height: natH },
+    },
     frames: composed.length,
     hasNetscapeLoop: hasNetscapeLoop(gifBuf),
   };

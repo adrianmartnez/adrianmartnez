@@ -1,10 +1,10 @@
 {
   "locale": "en",
   "out": "assets/profile-final/en/intermediate.gif",
-  "bytes": 1659475,
-  "mb": 1.583,
+  "bytes": 738720,
+  "mb": 0.704,
   "width": 680,
-  "height": 1017,
+  "height": 1014,
   "type": {
     "name": 34,
     "role": 24,
@@ -15,10 +15,19 @@
     "stackValue": 20
   },
   "metrics": {
-    "rootH": 1018,
+    "rootH": 1015,
     "tribalTop": 172,
     "tribalLeft": 80
   },
-  "frames": 38,
+  "tribalSlot": {
+    "width": 520,
+    "height": 368,
+    "source": "assets/tribal/tribal-only.gif",
+    "natural": {
+      "width": 480,
+      "height": 340
+    }
+  },
+  "frames": 18,
   "hasNetscapeLoop": false
 }
