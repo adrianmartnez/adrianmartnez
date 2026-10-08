@@ -52,22 +52,7 @@ function page(locale) {
     <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr>
         <td style="line-height:0;font-size:0;background:#000;">
-          <img src="${base}/lang-pad.svg" width="92%" height="20" alt="" /><a href="${enHref}"><img src="${base}/lang-en.svg" width="4%" height="20" alt="EN" /></a><a href="${esHref}"><img src="${base}/lang-es.svg" width="4%" height="20" alt="ES" /></a><img src="${hero}" alt="Hero" width="100%" />
-        </td>
-      </tr>
-      <tr>
-        <td style="line-height:0;font-size:0;background:#000;">
-          <img src="${base}/body.svg" alt="Body" width="100%" />
-        </td>
-      </tr>
-      <tr>
-        <td style="line-height:0;font-size:0;background:#000;">
-          <a href="https://adrianmartnez.dev" target="_blank" rel="noopener"><img src="${base}/connect-portfolio.svg" alt="Portfolio" width="100%" /></a>
-        </td>
-      </tr>
-      <tr>
-        <td style="line-height:0;font-size:0;background:#000;">
-          <a href="https://www.linkedin.com/in/adrian-martinez-martin" target="_blank" rel="noopener"><img src="${base}/connect-linkedin.svg" alt="LinkedIn" width="100%" /></a>
+          <img src="${base}/lang-pad.svg" width="92%" height="20" alt="" /><a href="${enHref}"><img src="${base}/lang-en.svg" width="4%" height="20" alt="EN" /></a><a href="${esHref}"><img src="${base}/lang-es.svg" width="4%" height="20" alt="ES" /></a><img src="${hero}" alt="Hero" width="100%" /><img src="${base}/body.svg" alt="Body" width="100%" /><a href="https://adrianmartnez.dev" target="_blank" rel="noopener"><img src="${base}/connect-portfolio.svg" alt="Portfolio" width="100%" /></a><a href="https://www.linkedin.com/in/adrian-martinez-martin" target="_blank" rel="noopener"><img src="${base}/connect-linkedin.svg" alt="LinkedIn" width="100%" /></a>
         </td>
       </tr>
     </table>
