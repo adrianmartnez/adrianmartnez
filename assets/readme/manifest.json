@@ -50,11 +50,11 @@
     "CARD": {
       "outerY": 12,
       "padX": 26,
-      "padY": 14,
+      "padY": 16,
       "logoGap": 18,
       "titleToBody": 12,
-      "bodyToTags": 16,
-      "tagsToLink": 14
+      "bodyToTags": 22,
+      "tagsToLink": 18
     }
   }
 }

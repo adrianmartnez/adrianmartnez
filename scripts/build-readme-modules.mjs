@@ -22,18 +22,18 @@ const ASCII_BOX = 76; // ~46px @670 — accompanies text, does not dominate
 
 /**
  * Spacing scale @1100 design (~×0.61 when README shown at 670px).
- * Card targets at ~670: padX 14–18 → 26; padY ~9–11 → 14; logo gap ~11 → 18;
- * card gap 12–16 → outer 12+12; title→body 6–8 → 12; body→tags 8–10 → 16.
+ * Card targets at ~670: padX 14–18 → 26; padY ~10 → 16; logo gap ~11 → 18;
+ * title→body 6–8 → 12; body→tags ~13–14 → 22; tags→link ~11 → 18.
  */
 const SPACE = { xs: 8, sm: 12, md: 16, lg: 24, xl: 32 };
 const CARD = {
   outerY: SPACE.sm, // stacked cards → ~24 design (~15px @670) between borders
   padX: 26,
-  padY: 14, // compact vertical pad — trim dead air under link
+  padY: SPACE.md, // 16 — compact but not clipped
   logoGap: 18, // proportional to smaller ASCII box
   titleToBody: SPACE.sm,
-  bodyToTags: SPACE.md, // 16 — clear beat after description
-  tagsToLink: 14,
+  bodyToTags: 22, // clear air after description before keywords
+  tagsToLink: 18, // clear air keywords → link
 };
 
 const C = {
@@ -450,7 +450,7 @@ for (const locale of ['en', 'es']) {
     dir,
     'connect-linkedin.svg',
     buildConnectRow(c.linkedinLabel, 'linkedin.com/in/adrian-martinez-martin', 'LinkedIn', {
-      bottomPad: SPACE.xl + SPACE.sm, // extra air so Connect doesn't feel clipped
+      bottomPad: SPACE.xl + SPACE.lg, // 56 — enough air under LinkedIn before canvas end
     }),
   );
 

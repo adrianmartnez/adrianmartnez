@@ -1,5 +1,6 @@
 /**
- * GitHub-faithful bilingual README preview (compact header + modules).
+ * GitHub-faithful bilingual README preview.
+ * Mirrors production HTML: one centered <p>, % widths for header row (no CSS flex).
  */
 import { createServer } from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
@@ -26,6 +27,7 @@ function page(locale) {
   const heroPath = join(root, 'assets/tribal', heroFile);
   const heroVer = existsSync(heroPath) ? String(readFileSync(heroPath).byteLength) : '0';
   const hero = `/assets/tribal/${heroFile}?v=${heroVer}`;
+  const other = isEs ? '/' : '/es';
   return `<!doctype html>
 <html lang="${isEs ? 'es' : 'en'}">
 <head>
@@ -35,37 +37,18 @@ function page(locale) {
 <style>
   html,body{margin:0;background:#0d1117;}
   .wrap{max-width:900px;margin:0 auto;padding:16px 12px 48px;}
-  .stack{line-height:0;font-size:0;}
-  .stack img{display:block;width:100%;height:auto;background:#000;border:0;margin:0;padding:0;}
-  .stack a{display:block;line-height:0;text-decoration:none;}
-  .header{line-height:0;font-size:0;display:flex;width:100%;background:#000;margin:0;padding:0;}
-  .header img{display:block;height:auto;background:#000;border:0;margin:0;padding:0;}
-  .header .fill{width:calc(988 / 1100 * 100%);flex:0 0 auto;}
-  .header a{display:block;line-height:0;width:calc(56 / 1100 * 100%);flex:0 0 auto;}
-  .header a img{width:100%;}
+  /* GitHub markdown: images in <p align=center> sit inline; width % of container */
+  .gh p{margin:0;padding:0;text-align:center;line-height:0;font-size:0;}
+  .gh img{vertical-align:top;background:#000;border:0;margin:0;padding:0;}
   .note{max-width:900px;margin:0 auto;padding:0 12px 12px;color:#8b949e;font:12px/1.4 ui-monospace,Consolas,monospace;}
 </style>
 </head>
 <body>
-  <p class="note">GitHub-faithful preview · compact header (EN/ES only) · width:100% scaling</p>
-  <div class="wrap">
-    <div class="header">
-      <img class="fill" src="${base}/header-fill.svg" alt="" width="988" height="28" />
-      <a href="/"><img src="${base}/lang-en.svg" alt="EN" width="56" height="28" /></a>
-      <a href="/es"><img src="${base}/lang-es.svg" alt="ES" width="56" height="28" /></a>
-    </div>
-    <div class="stack">
-      <img src="${hero}" alt="Hero" width="1100" />
-      <img src="${base}/about.svg" alt="About" width="1100" />
-      <img src="${base}/work-header.svg" alt="Selected work" width="1100" />
-      <a href="https://github.com/adrianmartnez/collibra-governance-automation" target="_blank" rel="noopener"><img src="${base}/project-collibra.svg" alt="Collibra" width="1100" /></a>
-      <a href="https://github.com/adrianmartnez/purview-governance-automation" target="_blank" rel="noopener"><img src="${base}/project-purview.svg" alt="Purview" width="1100" /></a>
-      <a href="https://github.com/adrianmartnez/governance-provider-example" target="_blank" rel="noopener"><img src="${base}/project-provider.svg" alt="Provider Example" width="1100" /></a>
-      <img src="${base}/stack.svg" alt="Stack" width="1100" />
-      <img src="${base}/connect-header.svg" alt="Connect" width="1100" />
-      <a href="https://adrianmartnez.dev" target="_blank" rel="noopener"><img src="${base}/connect-portfolio.svg" alt="Portfolio" width="1100" /></a>
-      <a href="https://www.linkedin.com/in/adrian-martinez-martin" target="_blank" rel="noopener"><img src="${base}/connect-linkedin.svg" alt="LinkedIn" width="1100" /></a>
-    </div>
+  <p class="note">GitHub-faithful preview · % header row · width:100% modules · max 900px</p>
+  <div class="wrap gh">
+    <p align="center">
+      <img src="${base}/header-fill.svg" width="89.818%" height="28" alt="" /><a href="/"><img src="${base}/lang-en.svg" width="5.091%" height="28" alt="EN" /></a><a href="${other}"><img src="${base}/lang-es.svg" width="5.091%" height="28" alt="ES" /></a><img src="${hero}" alt="Hero" width="100%" /><img src="${base}/about.svg" alt="About" width="100%" /><img src="${base}/work-header.svg" alt="Selected work" width="100%" /><a href="https://github.com/adrianmartnez/collibra-governance-automation" target="_blank" rel="noopener"><img src="${base}/project-collibra.svg" alt="Collibra" width="100%" /></a><a href="https://github.com/adrianmartnez/purview-governance-automation" target="_blank" rel="noopener"><img src="${base}/project-purview.svg" alt="Purview" width="100%" /></a><a href="https://github.com/adrianmartnez/governance-provider-example" target="_blank" rel="noopener"><img src="${base}/project-provider.svg" alt="Provider Example" width="100%" /></a><img src="${base}/stack.svg" alt="Stack" width="100%" /><img src="${base}/connect-header.svg" alt="Connect" width="100%" /><a href="https://adrianmartnez.dev" target="_blank" rel="noopener"><img src="${base}/connect-portfolio.svg" alt="Portfolio" width="100%" /></a><a href="https://www.linkedin.com/in/adrian-martinez-martin" target="_blank" rel="noopener"><img src="${base}/connect-linkedin.svg" alt="LinkedIn" width="100%" /></a>
+    </p>
   </div>
 </body>
 </html>`;
