@@ -76,7 +76,7 @@ const FONT_MAP = {
 const copy = {
   en: {
     hero: 'assets/tribal/profile-hero.gif',
-    out: 'assets/profile-final/en/mobile.gif',
+    out: 'assets/profile-final/en/mobile-v2.gif',
     name: 'Adrián Martínez Martín',
     role: 'Data Governance Engineer',
     gac: '> governance-as-code',
@@ -95,7 +95,7 @@ const copy = {
   },
   es: {
     hero: 'assets/tribal/profile-hero.es.gif',
-    out: 'assets/profile-final/es/mobile.gif',
+    out: 'assets/profile-final/es/mobile-v2.gif',
     name: 'Adrián Martínez Martín',
     role: 'Data Governance Engineer',
     gac: '> governance-as-code',

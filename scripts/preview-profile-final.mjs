@@ -41,7 +41,7 @@ function page(locale) {
     <p class="note">Candidate preview · seamless canvas · &lt;picture max-width:768px&gt;</p>
     <div class="nav" align="right"><a href="/">EN</a> · <a href="/es">ES</a></div>
     <picture>
-      <source media="(max-width: 768px)" srcset="${base}/mobile.gif" />
+      <source media="(max-width: 768px)" srcset="${base}/mobile-v2.gif" />
       <img src="${base}/desktop.gif" alt="Profile canvas" width="100%" />
     </picture>
     <div class="links" align="center"><a href="https://adrianmartnez.dev">Portfolio</a> · <a href="https://www.linkedin.com/in/adrian-martinez-martin">LinkedIn</a></div>

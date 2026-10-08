@@ -14,7 +14,7 @@ const puppeteer = require('puppeteer');
 
 const URL =
   'https://github.com/adrianmartnez/adrianmartnez/blob/fix/seamless-responsive-profile/README.md';
-const widths = [320, 375, 400, 600, 670, 768, 900];
+const widths = [320, 375, 400, 670, 900];
 
 const browser = await puppeteer.launch({
   headless: true,
