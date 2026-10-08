@@ -141,6 +141,16 @@ function buildLangTile(code, active) {
 `;
 }
 
+/** Full-width black pad left of EN/ES (same cell as hero; height = HEADER_H only). */
+function buildLangPad() {
+  const padW = W - LANG_W * 2;
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="${padW}" height="${HEADER_H}" viewBox="0 0 ${padW} ${HEADER_H}" aria-hidden="true">
+  <rect width="${padW}" height="${HEADER_H}" fill="${C.paper}"/>
+</svg>
+`;
+}
+
 /** Single continuous surface: About → Stack → Connect header. */
 function buildBody(c) {
   const parts = [];
@@ -217,7 +227,6 @@ function buildConnectRow(label, value, aria, { bottomPad = SPACE.sm } = {}) {
 const OBSOLETE = [
   'header-fill.svg',
   'header-brand.svg',
-  'lang-pad.svg',
   'about.svg',
   'stack.svg',
   'work-header.svg',
@@ -231,9 +240,9 @@ const OBSOLETE = [
 
 const manifest = {
   width: W,
-  header: { langW: LANG_W, height: HEADER_H },
+  header: { langW: LANG_W, height: HEADER_H, padW: W - LANG_W * 2 },
   locales: {},
-  structure: ['lang-en', 'lang-es', 'hero', 'body', 'connect-portfolio', 'connect-linkedin'],
+  structure: ['lang-pad', 'lang-en', 'lang-es', 'hero', 'body', 'connect-portfolio', 'connect-linkedin'],
 };
 
 for (const locale of ['en', 'es']) {
@@ -247,6 +256,7 @@ for (const locale of ['en', 'es']) {
     } catch {}
   }
 
+  write(dir, 'lang-pad.svg', buildLangPad());
   write(dir, 'lang-en.svg', buildLangTile('EN', locale === 'en'));
   write(dir, 'lang-es.svg', buildLangTile('ES', locale === 'es'));
   write(dir, 'body.svg', buildBody(c));

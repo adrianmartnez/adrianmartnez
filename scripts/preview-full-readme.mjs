@@ -40,10 +40,10 @@ function page(locale) {
   .wrap{max-width:900px;margin:0 auto;padding:16px 12px 48px;}
   .note{max-width:900px;margin:0 auto;padding:0 12px 12px;color:#8b949e;font:12px/1.4 ui-monospace,Consolas,monospace;}
   table{border-collapse:collapse;border-spacing:0;width:100%;}
-  td{padding:0;margin:0;line-height:0;font-size:0;vertical-align:top;}
-  img{display:block;border:0;margin:0;padding:0;background:#000;}
+  td{padding:0;margin:0;line-height:0;font-size:0;vertical-align:top;background:#000;}
+  img{display:inline-block;vertical-align:top;border:0;margin:0;padding:0;background:#000;}
+  img[width="100%"]{display:block;width:100%;height:auto;}
   a{display:inline;line-height:0;text-decoration:none;}
-  td[align="right"] img{display:inline-block;vertical-align:top;}
 </style>
 </head>
 <body>
@@ -51,27 +51,22 @@ function page(locale) {
   <div class="wrap">
     <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
       <tr>
-        <td align="right" bgcolor="#000000" style="line-height:0;font-size:0;">
-          <a href="${enHref}"><img src="${base}/lang-en.svg" width="44" height="20" alt="EN" /></a><a href="${esHref}"><img src="${base}/lang-es.svg" width="44" height="20" alt="ES" /></a>
+        <td style="line-height:0;font-size:0;background:#000;">
+          <img src="${base}/lang-pad.svg" width="92%" height="20" alt="" /><a href="${enHref}"><img src="${base}/lang-en.svg" width="4%" height="20" alt="EN" /></a><a href="${esHref}"><img src="${base}/lang-es.svg" width="4%" height="20" alt="ES" /></a><img src="${hero}" alt="Hero" width="100%" />
         </td>
       </tr>
       <tr>
-        <td bgcolor="#000000">
-          <img src="${hero}" alt="Hero" width="100%" />
-        </td>
-      </tr>
-      <tr>
-        <td bgcolor="#000000">
+        <td style="line-height:0;font-size:0;background:#000;">
           <img src="${base}/body.svg" alt="Body" width="100%" />
         </td>
       </tr>
       <tr>
-        <td bgcolor="#000000">
+        <td style="line-height:0;font-size:0;background:#000;">
           <a href="https://adrianmartnez.dev" target="_blank" rel="noopener"><img src="${base}/connect-portfolio.svg" alt="Portfolio" width="100%" /></a>
         </td>
       </tr>
       <tr>
-        <td bgcolor="#000000">
+        <td style="line-height:0;font-size:0;background:#000;">
           <a href="https://www.linkedin.com/in/adrian-martinez-martin" target="_blank" rel="noopener"><img src="${base}/connect-linkedin.svg" alt="LinkedIn" width="100%" /></a>
         </td>
       </tr>

@@ -2,7 +2,8 @@
   "width": 1100,
   "header": {
     "langW": 44,
-    "height": 20
+    "height": 20,
+    "padW": 1012
   },
   "locales": {
     "en": {
@@ -17,6 +18,7 @@
     }
   },
   "structure": [
+    "lang-pad",
     "lang-en",
     "lang-es",
     "hero",
