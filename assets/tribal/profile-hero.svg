@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="420" viewBox="0 0 1100 420" role="img" aria-label="Adrián Martínez Martín — Data Governance Engineer">
+  <title>Adrián Martínez Martín — Data Governance Engineer</title>
+  <desc>GitHub Profile hero v4: compact horizontal layout with braille tribal and governance callouts.</desc>
+  <defs>
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.035 0" in="noise" result="grainAlpha"/>
+      <feBlend in="SourceGraphic" in2="grainAlpha" mode="screen"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="420" fill="#000000"/>
+  <rect width="1100" height="420" fill="#000000" filter="url(#grain)"/>
+
+  <!-- LEFT / IDENTITY -->
+  <g id="identity">
+    <text x="32" y="134.9" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="9.5" font-weight="400" letter-spacing="0.04em" xml:space="preserve">DATA GOVERNANCE · DATA QUALITY · METADATA · LINEAGE</text>
+    <text x="32" y="156.9" fill="#ffffff" font-family="system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="27" font-weight="650" letter-spacing="-0.03em" xml:space="preserve">Adrián Martínez Martín</text>
+    <text x="32" y="186.9" fill="#ececea" font-family="system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" letter-spacing="-0.011em">Data Governance Engineer</text>
+    <line x1="32" y1="203.88" x2="200" y2="203.88" stroke="rgba(255,255,255,0.16)" stroke-width="1"/>
+    <text x="32" y="227.9" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="13" fill="#a8a6a2"><tspan fill="#642a3a">&gt;</tspan><tspan dx="6">governance-as-code</tspan></text>
+    <text x="32" y="246.3" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="13" fill="#a8a6a2"><tspan fill="#642a3a">&gt;</tspan><tspan dx="6">metadata / quality / lineage</tspan></text>
+    <text x="32" y="264.8" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="13" fill="#a8a6a2"><tspan fill="#642a3a">&gt;</tspan><tspan dx="6">python / sql</tspan></text>
+    <text x="32" y="283.3" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="13" fill="#a8a6a2"><tspan fill="#642a3a">&gt;</tspan><tspan dx="6">collibra / microsoft purview</tspan></text>
+  </g>
+
+  <!-- RIGHT / GOVERNANCE SIGNATURE -->
+  <g id="tribal-stage">
+    <text id="tribal" xml:space="preserve" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="3.330" font-variant-ligatures="none">
+      <tspan x="574.00" y="145.13" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="149.12" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="153.12" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣺⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="157.12" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="161.11" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="165.11" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣧⠀⠀⠀⠀⠀⠀⠀⣠⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="169.10" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢶⣄⡀⠀⠀⠀⠀⠠⣼⣿⣆⠀⠀⠀⠀⢀⣼⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="173.10" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣶⣄⠀⠀⠀⠈⠻⣿⣦⡀⠀⢀⣾⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="177.10" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣷⠢⠀⠀⠀⠹⣿⣿⣷⣿⠿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="181.09" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠈⠉⠑⠒⠦⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣸⣿⣧⣄⣀⠀⣀⣿⣿⣿⣿⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="185.09" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠳⢶⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡤⠶⠛⠛⠛⠛⠙⠛⠻⣿⣿⠟⠛⠻⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠴⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="189.09" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠿⣶⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠂⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢺⠇⠀⠀⠀⠘⣿⣿⣷⣦⣤⣄⣤⣤⣶⠖⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="193.08" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⢿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠲⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠆⠀⠀⠀⠀⢸⣿⡟⠉⠙⣿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⠴⠒⠛⠉⠉⠁</tspan>
+      <tspan x="574.00" y="197.08" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣾⣿⣿⣿⣿⣿⣷⣦⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⢰⠀⠀⠀⠈⠀⠀⠀⠀⣼⣿⢀⠄⠀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣇⠀⠀⠀⠀⠀⠀⣀⣠⣴⠾⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="201.07" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠚⠉⠉⠁⠀⠀⠀⠀⠈⣙⣿⣿⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡾⠛⠛⠛⠦⡀⠀⠀⠀⠀⠀⣼⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣅⣀⣀⣤⣶⣿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="205.07" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⣿⣷⣦⣀⣀⠀⠀⠀⠀⣀⣀⣤⣴⡾⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠇⠀⠀⠀⠀⠀⠀⣴⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠢⢤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣴⣿⣿⣿⢿⣿⣿⣿⣿⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="209.07" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣴⣿⣿⣿⣿⡿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠐⠒⠦⢦⣤⣤⣴⣶⣿⣿⣆⠀⠀⠀⢀⣠⣾⢿⣿⡿⠀⠀⠀⠀⠀⢲⣀⢀⢀⣀⣸⣿⣿⣿⣶⣶⣶⣷⣿⡟⠛⠉⠁⠀⠀⠀⠀⠀⠀⠈⠉⠛⠻⠶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="213.06" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣴⣶⡾⠿⠟⠛⠉⠉⠁⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣶⡾⠿⠟⠉⠉⠉⠙⠻⢿⣿⣿⣿⠟⠀⠀⣿⣇⠀⠀⠀⠀⠀⣸⣿⣿⡿⠿⠟⠻⠿⣿⣿⣿⠛⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠲⠤⣀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="217.06" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣤⡶⠿⠛⠋⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⡿⠟⠋⠉⠁⠀⠀⠀⠉⠉⠙⠛⠿⢦⣄⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⠀⠀⢠⣿⣿⡀⠀⠀⢀⣴⡿⠋⠁⠀⠀⠀⠀⠀⣨⣿⣿⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠐⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="221.06" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⣀⣠⡴⠞⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡾⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠂⠀⠀⠀⠀⠀⠀⣻⣿⣦⣴⣿⣿⣿⣿⣶⣾⣿⠏⠀⠀⠀⠀⠀⠀⠀⠉⠉⠈⠉⠛⠿⣶⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="225.05" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⣠⠤⠖⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⠟⠋⠁⠀⠉⠙⢿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠶⠦⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="229.05" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠁⠀⠀⠀⠀⠀⣼⡿⠁⠀⠀⠀⠀⠀⠀⠀⢹⣿⣆⣀⡤⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="233.05" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣇⠀⠀⠀⠀⢀⣾⣿⣧⡴⠂⠀⠀⠀⠀⠀⠀⢈⣿⣿⣿⡅⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="237.04" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⡁⠀⢀⣴⣿⣿⠿⠿⢷⣄⡀⠀⠀⠀⠀⠀⡼⠃⠈⠙⢿⣶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡠⠤⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="241.04" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠓⠶⣤⣤⣀⣀⣀⠀⣀⣀⣠⣴⣿⣿⣿⣶⣿⣿⡏⠁⠀⠀⠀⠀⠉⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠘⣿⡿⠷⣶⣤⣤⣤⣤⣤⣤⡶⠶⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="245.03" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠟⠛⠛⣿⣿⣿⠟⠋⠁⠉⢻⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡿⠁⠀⠀⠈⠙⢿⣿⡉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="249.03" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⠟⠁⠀⠀⠀⠀⠀⣿⣿⣷⡖⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠻⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="253.03" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡿⠋⠁⠀⠀⠀⠀⠀⠠⣼⠟⠻⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="257.02" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠾⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⡏⠀⠀⢹⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="261.02" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠠⠤⠒⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠃⠀⠀⠘⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠢⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="265.02" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="269.01" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="273.01" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+      <tspan x="574.00" y="277.01" textLength="363.00" lengthAdjust="spacingAndGlyphs">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</tspan>
+    </text>
+    <g id="connectors" opacity="0.95">
+    <path d="M 758.84 164.05 L 618.00 67.60 L 596.13 67.60" fill="none" stroke="#a8a6a2" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 695.57 208.00 L 605.50 195.76 L 583.63 195.76" fill="none" stroke="#a8a6a2" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 762.14 212.00 L 880.50 81.84 L 905.50 81.84" fill="none" stroke="#a8a6a2" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 815.43 235.98 L 880.50 274.08 L 905.50 274.08" fill="none" stroke="#a8a6a2" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 725.52 243.97 L 605.50 338.16 L 583.63 338.16" fill="none" stroke="#a8a6a2" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g id="markers">
+    <circle cx="758.84" cy="164.05" r="5.5" fill="#000000" stroke="#642a3a" stroke-width="1.4"/>
+    <circle cx="695.57" cy="208.00" r="5.5" fill="#000000" stroke="#642a3a" stroke-width="1.4"/>
+    <circle cx="762.14" cy="212.00" r="5.5" fill="#000000" stroke="#642a3a" stroke-width="1.4"/>
+    <circle cx="815.43" cy="235.98" r="5.5" fill="#000000" stroke="#642a3a" stroke-width="1.4"/>
+    <circle cx="725.52" cy="243.97" r="5.5" fill="#000000" stroke="#642a3a" stroke-width="1.4"/>
+    </g>
+    <g id="callouts">
+    <g data-callout="reference">
+      <text x="464.88" y="46.24" text-anchor="start" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="11" font-weight="500" letter-spacing="0.05em">REFERENCE</text>
+      <text x="464.88" y="60.24" text-anchor="start" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="9" letter-spacing="0.03em">NODE: SOURCE</text>
+      <text x="464.88" y="72.24" text-anchor="start" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="9" letter-spacing="0.03em">CLASS: REFERENCE_DATA</text>
+    </g>
+    <g data-callout="lineage">
+      <text x="464.88" y="174.40" text-anchor="start" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="11" font-weight="500" letter-spacing="0.05em">LINEAGE</text>
+      <text x="464.88" y="188.40" text-anchor="start" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="9" letter-spacing="0.03em">EDGE: DERIVED_FROM</text>
+      <text x="464.88" y="200.40" text-anchor="start" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="9" letter-spacing="0.03em">PATH: TRACEABLE</text>
+    </g>
+    <g data-callout="quality">
+      <text x="1046.13" y="74.72" text-anchor="end" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="11" font-weight="500" letter-spacing="0.05em">QUALITY CHECK</text>
+      <text x="1046.13" y="88.72" text-anchor="end" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="9" letter-spacing="0.03em">RULE: CONSISTENCY</text>
+      <text x="1046.13" y="100.72" text-anchor="end" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="9" letter-spacing="0.03em">RESULT: PASS</text>
+    </g>
+    <g data-callout="metadata">
+      <text x="1046.13" y="266.96" text-anchor="end" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="11" font-weight="500" letter-spacing="0.05em">METADATA</text>
+      <text x="1046.13" y="280.96" text-anchor="end" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="9" letter-spacing="0.03em">TERM: DOCUMENTED</text>
+      <text x="1046.13" y="292.96" text-anchor="end" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="9" letter-spacing="0.03em">OWNER: ASSIGNED</text>
+    </g>
+    <g data-callout="trace">
+      <text x="464.88" y="316.80" text-anchor="start" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="11" font-weight="500" letter-spacing="0.05em">TRACE PATH</text>
+      <text x="464.88" y="330.80" text-anchor="start" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="9" letter-spacing="0.03em">EDGE: SUPERSEDES</text>
+      <text x="464.88" y="342.80" text-anchor="start" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="9" letter-spacing="0.03em">STATE: CURRENT</text>
+    </g>
+    </g>
+  </g>
+</svg>

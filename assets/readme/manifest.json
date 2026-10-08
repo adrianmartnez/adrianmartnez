@@ -1,0 +1,60 @@
+{
+  "width": 1100,
+  "header": {
+    "fillW": 988,
+    "langW": 56,
+    "height": 28
+  },
+  "asciiBox": 76,
+  "asciiSource": {
+    "collibra": "assets/cards/collibra-ascii.txt",
+    "purview": "assets/cards/purview-ascii.txt"
+  },
+  "locales": {
+    "en": {
+      "dir": "assets/readme/en",
+      "portfolio": "https://adrianmartnez.dev",
+      "linkedin": "https://www.linkedin.com/in/adrian-martinez-martin",
+      "projects": [
+        "https://github.com/adrianmartnez/collibra-governance-automation",
+        "https://github.com/adrianmartnez/purview-governance-automation",
+        "https://github.com/adrianmartnez/governance-provider-example"
+      ]
+    },
+    "es": {
+      "dir": "assets/readme/es",
+      "portfolio": "https://adrianmartnez.dev",
+      "linkedin": "https://www.linkedin.com/in/adrian-martinez-martin",
+      "projects": [
+        "https://github.com/adrianmartnez/collibra-governance-automation",
+        "https://github.com/adrianmartnez/purview-governance-automation",
+        "https://github.com/adrianmartnez/governance-provider-example"
+      ]
+    }
+  },
+  "typography": {
+    "aboutBody": 18,
+    "projectTitle": 22,
+    "projectBody": 16,
+    "tags": 13,
+    "sectionLabel": 12
+  },
+  "spacing": {
+    "SPACE": {
+      "xs": 8,
+      "sm": 12,
+      "md": 16,
+      "lg": 24,
+      "xl": 32
+    },
+    "CARD": {
+      "outerY": 12,
+      "padX": 26,
+      "padY": 14,
+      "logoGap": 18,
+      "titleToBody": 12,
+      "bodyToTags": 16,
+      "tagsToLink": 14
+    }
+  }
+}

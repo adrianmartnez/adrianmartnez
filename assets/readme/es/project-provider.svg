@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1100" height="100" viewBox="0 0 1100 100" role="img" aria-label="Governance Provider Example">
+  <title>Governance Provider Example</title>
+  <rect width="1100" height="100" fill="#000000"/>
+  
+  <text x="40" y="24" fill="#ffffff" font-family="system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="17" font-weight="600" letter-spacing="-0.02em">Governance Provider Example</text>
+  <text x="40" y="48" fill="#a8a6a2" font-family="system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="15">Proveedor externo de referencia para demostrar el descubrimiento y las pruebas de conformidad de SDK API 1.</text>
+  <text x="40" y="84" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="12"><tspan fill="#642a3a">→</tspan><tspan dx="8">github.com/adrianmartnez/governance-provider-example</tspan></text>
+</svg>

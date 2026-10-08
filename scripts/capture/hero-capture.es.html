@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile hero capture</title>
+    <style>
+      /* Local capture fonts only — served at raster time; not shipped for GitHub. */
+      @font-face {
+        font-family: 'Inter Variable';
+        font-style: normal;
+        font-display: block;
+        font-weight: 100 900;
+        src: url('/fonts/inter-latin-wght-normal.woff2') format('woff2-variations');
+      }
+      @font-face {
+        font-family: 'Cascadia Mono';
+        font-style: normal;
+        font-display: block;
+        font-weight: 400;
+        src: url('/fonts/cascadia-mono-latin-400-normal.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Cascadia Mono';
+        font-style: normal;
+        font-display: block;
+        font-weight: 500;
+        src: url('/fonts/cascadia-mono-latin-500-normal.woff2') format('woff2');
+      }
+
+      :root {
+        --paper: #000000;
+        --ink: #ffffff;
+        --text: #ececea;
+        --muted: #a8a6a2;
+        --accent: #642a3a;
+        --line: rgba(255, 255, 255, 0.16);
+        --font-sans: 'Inter Variable', Inter, system-ui, sans-serif;
+        --font-mono: 'Cascadia Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Menlo, Monaco,
+          Consolas, 'Liberation Mono', monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        color: var(--text);
+        font-family: var(--font-sans);
+        overflow: hidden;
+      }
+
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.035;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-repeat: repeat;
+        background-size: 180px 180px;
+      }
+
+      #frame {
+        position: relative;
+        z-index: 1;
+        width: 1100px;
+        height: 380px;
+        background: var(--paper);
+        overflow: hidden;
+      }
+
+      /* LEFT ~37% of content (safe 32px); top-aligned to cut dead space above */
+      .identity {
+        position: absolute;
+        left: 32px;
+        top: 28px;
+        transform: none;
+        width: 383px;
+        z-index: 2;
+      }
+
+      .identity__eyebrow {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-family: var(--font-mono);
+        font-size: 9.5px;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        line-height: 1.2;
+        white-space: nowrap;
+      }
+
+      .identity__name {
+        margin: 0;
+        color: var(--ink);
+        font-family: var(--font-sans);
+        font-size: 27px;
+        font-weight: 650;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        white-space: nowrap;
+      }
+
+      .identity__role {
+        margin: 10px 0 0;
+        color: var(--text);
+        font-family: var(--font-sans);
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: -0.011em;
+      }
+
+      .identity__rule {
+        margin: 15px 0 20px;
+        width: 168px;
+        height: 1px;
+        background: var(--line);
+        border: 0;
+      }
+
+      .identity__term {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: var(--font-mono);
+        font-size: 13px;
+        line-height: 1.42;
+        color: var(--muted);
+      }
+
+      .identity__term li {
+        margin: 0 0 2px;
+      }
+
+      .identity__term .prompt {
+        color: var(--accent);
+        margin-right: 6px;
+      }
+
+      /* RIGHT column: matches SVG layout (safe 32); side bands for callouts */
+      .hero-tribal-stage {
+        position: absolute;
+        left: 443px;
+        top: 12px;
+        width: 625px;
+        height: 356px;
+        display: grid;
+        place-items: center;
+        overflow: visible;
+        --gov-label-width: 7.75rem;
+        --gov-column-inset: 1.15rem;
+        --gov-side-band: max(0px, calc(var(--gov-label-width) - var(--gov-column-inset)));
+        padding-inline: var(--gov-side-band);
+        box-sizing: border-box;
+      }
+
+      .hero-tribal-artbox {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        display: grid;
+        place-items: center;
+        overflow: visible;
+      }
+
+      .hero-tribal {
+        margin: 0;
+        padding: 0;
+        color: var(--ink);
+        background: transparent;
+        white-space: pre;
+        font-variant-ligatures: none;
+        font-feature-settings: 'liga' 0;
+        letter-spacing: 0;
+        line-height: 1.2;
+        user-select: none;
+        pointer-events: none;
+        overflow: visible;
+        max-width: 100%;
+        font-family: var(--font-mono);
+        font-size: 4.9px;
+        position: relative;
+        z-index: 0;
+        justify-self: center;
+      }
+
+      .hero-tribal[data-tribal-pending] {
+        visibility: hidden;
+      }
+
+      .hero-tribal__g {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        letter-spacing: inherit;
+        font: inherit;
+        line-height: inherit;
+        color: inherit;
+        opacity: 1;
+      }
+
+      .hero-gov {
+        --gov-label-gap: 6px;
+        --gov-label-width: 7.75rem;
+        --gov-column-inset: 1.15rem;
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        overflow: visible;
+      }
+
+      .hero-gov__connectors {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        overflow: visible;
+        pointer-events: none;
+      }
+
+      .hero-gov__line {
+        stroke: var(--muted);
+        stroke-width: 1.15;
+        fill: none;
+        opacity: 0;
+      }
+
+      .hero-gov__line.is-drawing,
+      .hero-gov__line.is-drawn {
+        opacity: 1;
+      }
+
+      .hero-gov__callout {
+        --label-y: var(--d-label-y);
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .hero-gov__marker {
+        position: absolute;
+        left: var(--marker-x);
+        top: var(--marker-y);
+        width: 11px;
+        aspect-ratio: 1;
+        border: 1.25px solid var(--accent);
+        border-radius: 50%;
+        background: var(--paper);
+        box-sizing: border-box;
+        transform: translate(-50%, -50%) scale(0.82);
+        opacity: 0;
+        z-index: 3;
+        transition:
+          opacity 180ms cubic-bezier(0.22, 1, 0.36, 1),
+          transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .hero-gov__marker.is-shown {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .hero-gov__label {
+        position: absolute;
+        top: var(--label-y);
+        z-index: 4;
+        width: var(--gov-label-width);
+        max-width: var(--gov-label-width);
+        padding: 0;
+        background: transparent;
+        font-family: var(--font-mono);
+        pointer-events: none;
+      }
+
+      .hero-gov__callout--side-left .hero-gov__label {
+        left: auto;
+        right: calc(100% - var(--gov-column-inset));
+      }
+
+      .hero-gov__callout--side-right .hero-gov__label {
+        left: calc(100% - var(--gov-column-inset));
+        right: auto;
+      }
+
+      .hero-gov__title,
+      .hero-gov__meta {
+        opacity: 1;
+        white-space: nowrap;
+      }
+
+      .hero-gov__title {
+        margin: 0 0 0.22rem;
+        color: var(--ink);
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        line-height: 1.25;
+      }
+
+      .hero-gov__meta {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.54rem;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        line-height: 1.35;
+      }
+
+      .hero-gov__meta + .hero-gov__meta {
+        margin-top: 0.08rem;
+      }
+
+      .hero-gov__ch {
+        display: inline;
+        visibility: hidden;
+        transition: none !important;
+        animation: none !important;
+        filter: none !important;
+        opacity: 1 !important;
+      }
+
+      .hero-gov__cursor {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 5;
+        width: 0.4em;
+        height: 0.95em;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        pointer-events: none;
+        user-select: none;
+        color: transparent;
+        background: var(--ink);
+        font-size: 0.58rem;
+        line-height: 1;
+        will-change: transform;
+      }
+
+      .hero-gov__cursor[hidden] {
+        display: none !important;
+      }
+
+      .hero-gov.is-console-armed:not(.is-console-done) .hero-gov__ch:not(.is-typed) {
+        visibility: hidden;
+      }
+
+      .hero-gov.is-console-armed .hero-gov__ch.is-typed,
+      .hero-gov.is-console-done .hero-gov__ch {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="frame" data-capture-root>
+      <div class="identity">
+        <p class="identity__eyebrow">DATA GOVERNANCE · CALIDAD · METADATOS · LINAJE</p>
+        <h1 class="identity__name">Adrián Martínez Martín</h1>
+        <p class="identity__role">Data Governance Engineer</p>
+        <hr class="identity__rule" />
+        <ul class="identity__term">
+          <li><span class="prompt">&gt;</span>governance-as-code</li>
+          <li><span class="prompt">&gt;</span>metadatos / calidad / linaje</li>
+          <li><span class="prompt">&gt;</span>python / sql</li>
+          <li><span class="prompt">&gt;</span>collibra / microsoft purview</li>
+        </ul>
+      </div>
+
+      <div class="hero-tribal-stage" data-hero-tribal-stage>
+        <div class="hero-tribal-artbox">
+          <pre class="hero-tribal" data-hero-tribal data-tribal-pending aria-hidden="true"></pre>
+          <div class="hero-gov is-console-armed" data-hero-gov data-hero-gov-idle="1" aria-hidden="true">
+            <span class="hero-gov__cursor" hidden></span>
+            <svg
+              class="hero-gov__connectors"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+              focusable="false"
+              aria-hidden="true"
+              overflow="visible"
+            ></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      const BRAILLE_BLANK = '\u2800';
+      const MARKER_STAGGER_MS = 70;
+      const MARKER_REVEAL_MS = 150;
+      const ARROW_TO_TYPE_GAP_MS = 28;
+      const LINE_GAP_MS = 10;
+      const AFTER_TEXT_GAP_MS = 48;
+      const ARROW_DRAW_SPEED = 0.85;
+      const ARROW_MIN_MS = 130;
+      const ARROW_MAX_MS = 260;
+      const ARROW_HARD_MAX_MS = 280;
+
+      const callouts = [
+        {
+          id: 'reference',
+          title: 'REFERENCIA',
+          line1: 'NODO: ORIGEN',
+          line2: 'CLASE: REFERENCE_DATA',
+          side: 'left',
+          markerCell: { row: 5, col: 55, char: '\u28B9', codepoint: 0x28b9 },
+          desk: { elbow: { x: 8, y: 10 }, end: { x: 2, y: 10 }, labelY: 2 },
+        },
+        {
+          id: 'lineage',
+          title: 'LINAJE',
+          line1: 'ARISTA: DERIVED_FROM',
+          line2: 'RUTA: TRAZABLE',
+          side: 'left',
+          markerCell: { row: 16, col: 36, char: '\u28FF', codepoint: 0x28ff },
+          desk: { elbow: { x: 8, y: 46 }, end: { x: 2, y: 46 }, labelY: 39 },
+        },
+        {
+          id: 'quality',
+          title: 'CALIDAD',
+          line1: 'REGLA: CONSISTENCY',
+          line2: 'RESULTADO: PASS',
+          side: 'right',
+          markerCell: { row: 17, col: 56, char: '\u28FF', codepoint: 0x28ff },
+          // ~18px gap before ink; stub Y on title mid (same clean air as left stubs).
+          desk: { elbow: { x: 85, y: 14 }, end: { x: 91, y: 14 }, labelY: 11 },
+        },
+        {
+          id: 'metadata',
+          title: 'METADATOS',
+          line1: 'TÉRMINO: DOCUMENTADO',
+          line2: 'OWNER: ASIGNADO',
+          side: 'right',
+          markerCell: { row: 23, col: 72, char: '\u2840', codepoint: 0x2840 },
+          desk: { elbow: { x: 85, y: 68 }, end: { x: 91, y: 68 }, labelY: 65 },
+        },
+        {
+          id: 'trace',
+          title: 'TRAZA',
+          line1: 'ARISTA: SUPERSEDES',
+          line2: 'ESTADO: ACTUAL',
+          side: 'left',
+          markerCell: { row: 25, col: 45, char: '\u28FF', codepoint: 0x28ff },
+          desk: { elbow: { x: 8, y: 86 }, end: { x: 2, y: 86 }, labelY: 79 },
+        },
+      ];
+
+      function escapeHtml(ch) {
+        if (ch === '&') return '&amp;';
+        if (ch === '<') return '&lt;';
+        if (ch === '>') return '&gt;';
+        return ch;
+      }
+
+      function cellToPct(cell, rows, cols) {
+        return {
+          x: +(((cell.col + 0.5) / cols) * 100).toFixed(2),
+          y: +(((cell.row + 0.5) / rows) * 100).toFixed(2),
+        };
+      }
+
+      function pathD(marker, elbow, end) {
+        return `M ${marker.x} ${marker.y} L ${elbow.x} ${elbow.y} L ${end.x} ${end.y}`;
+      }
+
+      function toChars(text) {
+        return Array.from(text);
+      }
+
+      function maskToChar(mask) {
+        return String.fromCodePoint(0x2800 + (mask & 0xff));
+      }
+
+      function buildGlyphHtml(grid, inkCount) {
+        const lines = [];
+        let glyphIndex = 0;
+        for (let r = 0; r < grid.length; r++) {
+          let line = '';
+          for (let c = 0; c < grid[r].length; c++) {
+            const ch = grid[r][c];
+            if (ch === ' ' || ch === '\t' || ch === '\u2800' || (ch.length > 0 && /^\s$/.test(ch))) {
+              line += escapeHtml(ch);
+              continue;
+            }
+            line += `<span class="hero-tribal__g" data-gi="${glyphIndex}" data-r="${r}" data-c="${c}" data-ch="${escapeHtml(ch)}">${escapeHtml(ch)}</span>`;
+            glyphIndex += 1;
+          }
+          lines.push(line);
+        }
+        if (glyphIndex !== inkCount) {
+          throw new Error(`ink mismatch: html=${glyphIndex} plan=${inkCount}`);
+        }
+        return lines.join('\n');
+      }
+
+      function createPending() {
+        return { timeouts: [], rafs: [] };
+      }
+
+      function trackTimeout(pending, fn, ms) {
+        const id = window.setTimeout(() => {
+          pending.timeouts = pending.timeouts.filter((t) => t !== id);
+          fn();
+        }, ms);
+        pending.timeouts.push(id);
+        return id;
+      }
+
+      function sleep(pending, ms) {
+        return new Promise((resolve) => trackTimeout(pending, resolve, ms));
+      }
+
+      function trackRaf(pending, fn) {
+        const id = requestAnimationFrame((t) => {
+          pending.rafs = pending.rafs.filter((r) => r !== id);
+          fn(t);
+        });
+        pending.rafs.push(id);
+        return id;
+      }
+
+      function clearPending(pending) {
+        for (const id of pending.timeouts) window.clearTimeout(id);
+        for (const id of pending.rafs) cancelAnimationFrame(id);
+        pending.timeouts.length = 0;
+        pending.rafs.length = 0;
+      }
+
+      function placeCursor(cursor, after, host) {
+        const hostRect = host.getBoundingClientRect();
+        const afterRect = after.getBoundingClientRect();
+        cursor.hidden = false;
+        cursor.style.transform = `translate(${Math.round(afterRect.right - hostRect.left)}px, ${Math.round(afterRect.top - hostRect.top)}px)`;
+      }
+
+      function hideCursor(cursor) {
+        if (!cursor) return;
+        cursor.hidden = true;
+        cursor.style.transform = '';
+      }
+
+      function typeChars(pending, chars, durationMs, cursor, host) {
+        return new Promise((resolve) => {
+          if (!chars.length) {
+            resolve();
+            return;
+          }
+          const start = performance.now();
+          let typed = 0;
+          const step = (now) => {
+            const t = Math.min(1, (now - start) / Math.max(durationMs, 1));
+            const target = Math.max(typed + 1, Math.ceil(t * chars.length));
+            const end = Math.min(target, chars.length);
+            while (typed < end) {
+              chars[typed].classList.add('is-typed');
+              typed += 1;
+            }
+            if (cursor && typed > 0) placeCursor(cursor, chars[typed - 1], host);
+            if (typed < chars.length) trackRaf(pending, step);
+            else resolve();
+          };
+          trackRaf(pending, step);
+        });
+      }
+
+      function pathLengthPx(path) {
+        const len = path.getTotalLength();
+        if (len <= 0) return 0;
+        const ctm = path.getScreenCTM();
+        if (!ctm) return len;
+        const samples = 48;
+        let px = 0;
+        let prev = path.getPointAtLength(0);
+        for (let i = 1; i <= samples; i += 1) {
+          const pt = path.getPointAtLength((len * i) / samples);
+          const x1 = ctm.a * prev.x + ctm.c * prev.y + ctm.e;
+          const y1 = ctm.b * prev.x + ctm.d * prev.y + ctm.f;
+          const x2 = ctm.a * pt.x + ctm.c * pt.y + ctm.e;
+          const y2 = ctm.b * pt.x + ctm.d * pt.y + ctm.f;
+          px += Math.hypot(x2 - x1, y2 - y1);
+          prev = pt;
+        }
+        return px;
+      }
+
+      function arrowDurationMs(path) {
+        const raw = pathLengthPx(path) / ARROW_DRAW_SPEED;
+        return Math.min(ARROW_HARD_MAX_MS, Math.max(ARROW_MIN_MS, Math.min(ARROW_MAX_MS, Math.round(raw))));
+      }
+
+      async function animateArrow(path, pending) {
+        const duration = arrowDurationMs(path);
+        path.style.transition = 'none';
+        path.setAttribute('pathLength', '1');
+        path.setAttribute('stroke-dasharray', '1 1');
+        path.setAttribute('stroke-dashoffset', '1');
+        path.classList.add('is-drawing');
+        void path.getBoundingClientRect();
+        const start = performance.now();
+        await new Promise((resolve) => {
+          const step = (now) => {
+            const t = Math.min(1, (now - start) / Math.max(duration, 1));
+            path.setAttribute('stroke-dashoffset', String(1 - t));
+            if (t < 1) trackRaf(pending, step);
+            else resolve();
+          };
+          trackRaf(pending, step);
+        });
+        path.classList.remove('is-drawing');
+        path.classList.add('is-drawn');
+        path.removeAttribute('stroke-dasharray');
+        path.removeAttribute('stroke-dashoffset');
+        path.removeAttribute('pathLength');
+      }
+
+      function calloutTypingMs(charCount) {
+        return Math.min(250, Math.max(100, Math.round(70 + charCount * 2.4)));
+      }
+
+      function fitTribalWidth(tribal) {
+        const artbox = tribal.closest('.hero-tribal-artbox');
+        const avail = artbox?.clientWidth ?? 0;
+        if (avail < 16) return;
+        const base = parseFloat(getComputedStyle(tribal).fontSize) || 6.4;
+        tribal.style.fontSize = '';
+        const natural = tribal.scrollWidth;
+        if (!(natural > 0)) return;
+        const next = natural <= avail + 0.5 ? base : Math.max(2.4, (base * avail) / natural);
+        tribal.style.fontSize = `${next}px`;
+      }
+
+      async function runTribalBuild(tribal, events) {
+        const spans = [...tribal.querySelectorAll('.hero-tribal__g')];
+        for (const s of spans) s.textContent = BRAILLE_BLANK;
+        tribal.removeAttribute('data-tribal-pending');
+        tribal.setAttribute('data-tribal-ready', '1');
+        fitTribalWidth(tribal);
+        tribal.classList.add('is-tribal-revealing');
+        tribal.classList.remove('is-tribal-complete');
+
+        let eventIndex = 0;
+        const startMs = performance.now();
+
+        await new Promise((resolve) => {
+          const frame = (now) => {
+            const elapsed = now - startMs;
+            const pending = new Map();
+            while (eventIndex < events.length && events[eventIndex][0] <= elapsed) {
+              const [, gi, mask] = events[eventIndex];
+              pending.set(gi, mask);
+              eventIndex += 1;
+            }
+            for (const [gi, mask] of pending) {
+              const span = spans[gi];
+              if (span) span.textContent = maskToChar(mask);
+            }
+            if (eventIndex >= events.length) {
+              for (const s of spans) {
+                const ch = s.getAttribute('data-ch');
+                if (ch != null) s.textContent = ch;
+              }
+              tribal.classList.add('is-tribal-complete');
+              tribal.classList.remove('is-tribal-revealing');
+              resolve();
+              return;
+            }
+            requestAnimationFrame(frame);
+          };
+          requestAnimationFrame(frame);
+        });
+      }
+
+      async function runGovSequence(root, tribal, events) {
+        const pending = createPending();
+        const cursorEl = root.querySelector('.hero-gov__cursor');
+        const origin = performance.now();
+
+        await runTribalBuild(tribal, events);
+        const tribalComplete = Math.round(performance.now() - origin);
+
+        const markers = [...root.querySelectorAll('.hero-gov__marker')];
+        for (let i = 0; i < markers.length; i += 1) {
+          markers[i].classList.add('is-shown');
+          if (i < markers.length - 1) await sleep(pending, MARKER_STAGGER_MS);
+        }
+        await sleep(pending, MARKER_REVEAL_MS);
+
+        const calloutEls = [...root.querySelectorAll('[data-hero-gov-callout]')];
+        for (let i = 0; i < calloutEls.length; i += 1) {
+          const callout = calloutEls[i];
+          const id = callout.dataset.heroGovId;
+          const path = root.querySelector(`.hero-gov__line--${id}`);
+          if (path) await animateArrow(path, pending);
+          await sleep(pending, ARROW_TO_TYPE_GAP_MS);
+
+          const textLines = [...callout.querySelectorAll('[data-hero-gov-line]')];
+          const calloutChars = textLines.reduce(
+            (sum, line) => sum + line.querySelectorAll('.hero-gov__ch').length,
+            0,
+          );
+          const calloutBudget = calloutTypingMs(calloutChars);
+          for (let j = 0; j < textLines.length; j += 1) {
+            const line = textLines[j];
+            const chars = [...line.querySelectorAll('.hero-gov__ch')];
+            const lineShare = calloutChars > 0 ? chars.length / calloutChars : 1 / textLines.length;
+            const lineMs = Math.max(24, Math.round(calloutBudget * lineShare));
+            await typeChars(pending, chars, lineMs, cursorEl, root);
+            if (j < textLines.length - 1) await sleep(pending, LINE_GAP_MS);
+          }
+          hideCursor(cursorEl);
+          if (i < calloutEls.length - 1) await sleep(pending, AFTER_TEXT_GAP_MS);
+        }
+
+        hideCursor(cursorEl);
+        clearPending(pending);
+        root.classList.remove('is-console-armed');
+        root.classList.add('is-console-done');
+        const total = Math.round(performance.now() - origin);
+        const prev = window.__heroCapture || {};
+        window.__heroCapture = {
+          ...prev,
+          ready: true,
+          done: true,
+          tribalCompleteMs: tribalComplete,
+          totalDurationMs: total,
+        };
+        document.documentElement.dataset.captureDone = '1';
+      }
+
+      function mountGov(rows, cols) {
+        const root = document.querySelector('[data-hero-gov]');
+        const svg = root.querySelector('.hero-gov__connectors');
+        for (const c of callouts) {
+          const marker = cellToPct(c.markerCell, rows, cols);
+          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          path.setAttribute('class', `hero-gov__line hero-gov__line--${c.id}`);
+          path.setAttribute('d', pathD(marker, c.desk.elbow, c.desk.end));
+          path.setAttribute('fill', 'none');
+          path.setAttribute('vector-effect', 'non-scaling-stroke');
+          path.setAttribute('stroke-linecap', 'round');
+          path.setAttribute('stroke-linejoin', 'round');
+          svg.appendChild(path);
+
+          const wrap = document.createElement('div');
+          wrap.className = `hero-gov__callout hero-gov__callout--${c.id} hero-gov__callout--side-${c.side}`;
+          wrap.style.cssText = `--marker-x:${marker.x}%;--marker-y:${marker.y}%;--d-label-y:${c.desk.labelY}%;`;
+          wrap.dataset.heroGovCallout = '';
+          wrap.dataset.heroGovId = c.id;
+
+          const markerEl = document.createElement('span');
+          markerEl.className = `hero-gov__marker hero-gov__marker--${c.id}`;
+          wrap.appendChild(markerEl);
+
+          const label = document.createElement('div');
+          label.className = `hero-gov__label hero-gov__label--${c.id}`;
+
+          for (const [cls, text] of [
+            ['hero-gov__title', c.title],
+            ['hero-gov__meta hero-gov__meta--1', c.line1],
+            ['hero-gov__meta hero-gov__meta--2', c.line2],
+          ]) {
+            const p = document.createElement('p');
+            p.className = cls;
+            p.dataset.heroGovLine = '';
+            p.setAttribute('aria-label', text);
+            for (const ch of toChars(text)) {
+              const span = document.createElement('span');
+              span.className = 'hero-gov__ch';
+              span.setAttribute('aria-hidden', 'true');
+              span.textContent = ch;
+              p.appendChild(span);
+            }
+            label.appendChild(p);
+          }
+
+          wrap.appendChild(label);
+          root.appendChild(wrap);
+        }
+      }
+
+      const data = await fetch('./tribal-build.json').then((r) => r.json());
+      const tribal = document.querySelector('[data-hero-tribal]');
+      tribal.innerHTML = buildGlyphHtml(data.grid, data.inkCount);
+      tribal.style.setProperty('--tribal-prop-ms', `${data.propagationMs}ms`);
+      mountGov(data.rows, data.cols);
+
+      // Blank for motion (same as portfolio inline blanker).
+      for (const el of tribal.querySelectorAll('.hero-tribal__g')) {
+        if (!el.getAttribute('data-ch')) el.setAttribute('data-ch', el.textContent || '');
+        el.textContent = BRAILLE_BLANK;
+      }
+      tribal.setAttribute('data-tribal-ready', '1');
+      tribal.removeAttribute('data-tribal-pending');
+
+      // Wait for Inter Variable + Cascadia Mono before measuring / starting choreography.
+      if (document.fonts?.load) {
+        try {
+          await Promise.all([
+            document.fonts.load("650 27px 'Inter Variable'"),
+            document.fonts.load("500 15px 'Inter Variable'"),
+            document.fonts.load("400 13px 'Cascadia Mono'"),
+            document.fonts.load("500 11px 'Cascadia Mono'"),
+          ]);
+        } catch (_) {}
+      }
+      if (document.fonts?.ready) {
+        await document.fonts.ready.catch(() => {});
+      }
+      fitTribalWidth(tribal);
+
+      const fontSans = getComputedStyle(document.querySelector('.identity__name')).fontFamily;
+      const fontMono = getComputedStyle(document.querySelector('.identity__term')).fontFamily;
+      window.__heroCapture = {
+        ready: true,
+        done: false,
+        propagationMs: data.propagationMs,
+        inkCount: data.inkCount,
+        events: data.events.length,
+        fontSans,
+        fontMono,
+      };
+      document.documentElement.dataset.captureReady = '1';
+
+      const root = document.querySelector('[data-hero-gov]');
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          void runGovSequence(root, tribal, data.events);
+        });
+      });
+    </script>
+  </body>
+</html>

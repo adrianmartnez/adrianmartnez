@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1100" height="32" viewBox="0 0 1100 32" role="img" aria-label="04 / CONNECT">
+  <title>04 / CONNECT</title>
+  <rect width="1100" height="32" fill="#000000"/>
+  <line x1="40" y1="0.5" x2="1060" y2="0.5" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+  
+  <text x="40" y="24" fill="#a8a6a2" font-family="ui-monospace, SFMono-Regular, Cascadia Mono, Consolas, Liberation Mono, monospace" font-size="12" letter-spacing="0.08em">04 / CONNECT</text>
+
+</svg>

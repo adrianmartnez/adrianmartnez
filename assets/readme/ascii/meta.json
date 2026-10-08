@@ -1,0 +1,20 @@
+{
+  "collibra": {
+    "out": "C:\\Users\\Adrian\\Downloads\\adrianmartnez\\assets\\readme\\ascii\\collibra.png",
+    "bytes": 12232,
+    "box": 115,
+    "scale": 0.22286821705426357,
+    "s": 0.22286821705426357,
+    "visCols": 78,
+    "visRows": 43
+  },
+  "purview": {
+    "out": "C:\\Users\\Adrian\\Downloads\\adrianmartnez\\assets\\readme\\ascii\\purview.png",
+    "bytes": 11649,
+    "box": 115,
+    "scale": 0.15840220385674927,
+    "s": 0.15840220385674927,
+    "visCols": 110,
+    "visRows": 41
+  }
+}

@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Capture / QA intermediates (keep hero-capture*.html)
+scripts/capture/frames/
+scripts/capture/tribal-build.json
+scripts/capture/capture-report.json
+scripts/capture/layout-v2.json
+scripts/capture/qa-report.json
+scripts/capture/preview-*.png
+scripts/capture/qa-*.png
+scripts/capture/qa-gif-*.png
+scripts/capture/_qa-*.png
+scripts/capture/_zoom-*.png
+scripts/capture/compact-*.png
+scripts/capture/connector-*.png
+scripts/capture/final-*.png
+scripts/capture/micro-*.png
+scripts/capture/spacing-*.png
+
+# Backups
+*.bak
+*.bak-*
+*.bak-*
+
+# Local release helpers
+scripts/_release-audit.mjs
+scripts/_qa-*.mjs
