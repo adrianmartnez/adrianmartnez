@@ -1,10 +1,10 @@
 {
   "locale": "en",
   "out": "assets/profile-final/en/mobile.gif",
-  "bytes": 1439329,
-  "mb": 1.373,
+  "bytes": 1603465,
+  "mb": 1.529,
   "width": 400,
-  "height": 1160,
+  "height": 1298,
   "typePrevious": {
     "name": 22,
     "role": 14,
@@ -14,30 +14,30 @@
     "secondary": 9
   },
   "typeNew": {
-    "name": 30,
-    "role": 20,
-    "gac": 17,
-    "section": 17,
-    "about": 23,
-    "stackLabel": 17,
-    "stackValue": 22
+    "name": 32,
+    "role": 25,
+    "gac": 18,
+    "section": 18,
+    "about": 26,
+    "stackLabel": 18,
+    "stackValue": 25
   },
   "metrics": {
-    "rootH": 1161,
-    "tribalTop": 158,
+    "rootH": 1299,
+    "tribalTop": 167,
     "tribalLeft": 22,
-    "nameFs": "30px",
-    "roleFs": "20px",
+    "nameFs": "32px",
+    "roleFs": "25px",
     "about": [
       {
-        "fontSize": "23px",
-        "lineHeight": "31.74px",
-        "height": 127
+        "fontSize": "26px",
+        "lineHeight": "35.88px",
+        "height": 179
       },
       {
-        "fontSize": "23px",
-        "lineHeight": "31.74px",
-        "height": 127
+        "fontSize": "26px",
+        "lineHeight": "35.88px",
+        "height": 179
       }
     ]
   },

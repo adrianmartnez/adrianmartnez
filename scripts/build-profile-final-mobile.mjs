@@ -29,15 +29,19 @@ const TRIBAL_W = 356;
 /** Crop tribal art from desktop 1100×380 hero (no side callout columns). */
 const CROP = { left: 520, top: 36, width: 420, height: 300 };
 
-/** Target type sizes on the 400px canvas (px). */
+/**
+ * Target type sizes on the 400px canvas (px).
+ * Tuned from GitHub blob measurements: at viewport 320 the image displays ~254px
+ * (scale ≈ 0.635). Canvas sizes below yield ≥16px body / ≥20px name after that scale.
+ */
 const TYPE = {
-  name: 30,
-  role: 20,
-  gac: 17,
-  section: 17,
-  about: 23,
-  stackLabel: 17,
-  stackValue: 22,
+  name: 32,
+  role: 25,
+  gac: 18,
+  section: 18,
+  about: 26,
+  stackLabel: 18,
+  stackValue: 25,
 };
 
 const PREVIOUS_TYPE = {
