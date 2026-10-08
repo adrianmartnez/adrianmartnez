@@ -1,44 +1,143 @@
 {
-  "en": {
-    "locale": "en",
-    "out": "assets/profile-final/en/mobile.gif",
-    "bytes": 1062623,
-    "mb": 1.013,
-    "width": 400,
-    "height": 859,
-    "tribalSlot": {
-      "width": 340,
-      "height": 243,
-      "crop": {
-        "left": 520,
-        "top": 36,
-        "width": 420,
-        "height": 300
-      }
-    },
-    "frames": 38,
-    "hasNetscapeLoop": false,
-    "note": "Mobile-specific vertical layout; tribal cropped from desktop hero frames (animation algorithm unchanged); callouts shown as compact chip row for legibility."
+  "typePrevious": {
+    "name": 22,
+    "role": 14,
+    "about": 14,
+    "stackValue": 14,
+    "section": 11,
+    "secondary": 9
   },
-  "es": {
-    "locale": "es",
-    "out": "assets/profile-final/es/mobile.gif",
-    "bytes": 1124657,
-    "mb": 1.073,
-    "width": 400,
-    "height": 859,
-    "tribalSlot": {
-      "width": 340,
-      "height": 243,
-      "crop": {
-        "left": 520,
-        "top": 36,
-        "width": 420,
-        "height": 300
-      }
+  "typeNew": {
+    "name": 30,
+    "role": 20,
+    "gac": 17,
+    "section": 17,
+    "about": 23,
+    "stackLabel": 17,
+    "stackValue": 22
+  },
+  "reports": {
+    "en": {
+      "locale": "en",
+      "out": "assets/profile-final/en/mobile.gif",
+      "bytes": 1439329,
+      "mb": 1.373,
+      "width": 400,
+      "height": 1160,
+      "typePrevious": {
+        "name": 22,
+        "role": 14,
+        "about": 14,
+        "stackValue": 14,
+        "section": 11,
+        "secondary": 9
+      },
+      "typeNew": {
+        "name": 30,
+        "role": 20,
+        "gac": 17,
+        "section": 17,
+        "about": 23,
+        "stackLabel": 17,
+        "stackValue": 22
+      },
+      "metrics": {
+        "rootH": 1161,
+        "tribalTop": 158,
+        "tribalLeft": 22,
+        "nameFs": "30px",
+        "roleFs": "20px",
+        "about": [
+          {
+            "fontSize": "23px",
+            "lineHeight": "31.74px",
+            "height": 127
+          },
+          {
+            "fontSize": "23px",
+            "lineHeight": "31.74px",
+            "height": 127
+          }
+        ]
+      },
+      "tribalSlot": {
+        "width": 356,
+        "height": 254,
+        "crop": {
+          "left": 520,
+          "top": 36,
+          "width": 420,
+          "height": 300
+        }
+      },
+      "frames": 38,
+      "hasNetscapeLoop": false,
+      "removedFromMobile": [
+        "callout chip row",
+        "eyebrow metadata strip",
+        "multi-term secondary list"
+      ]
     },
-    "frames": 39,
-    "hasNetscapeLoop": false,
-    "note": "Mobile-specific vertical layout; tribal cropped from desktop hero frames (animation algorithm unchanged); callouts shown as compact chip row for legibility."
+    "es": {
+      "locale": "es",
+      "out": "assets/profile-final/es/mobile.gif",
+      "bytes": 1586846,
+      "mb": 1.513,
+      "width": 400,
+      "height": 1224,
+      "typePrevious": {
+        "name": 22,
+        "role": 14,
+        "about": 14,
+        "stackValue": 14,
+        "section": 11,
+        "secondary": 9
+      },
+      "typeNew": {
+        "name": 30,
+        "role": 20,
+        "gac": 17,
+        "section": 17,
+        "about": 23,
+        "stackLabel": 17,
+        "stackValue": 22
+      },
+      "metrics": {
+        "rootH": 1224,
+        "tribalTop": 158,
+        "tribalLeft": 22,
+        "nameFs": "30px",
+        "roleFs": "20px",
+        "about": [
+          {
+            "fontSize": "23px",
+            "lineHeight": "31.74px",
+            "height": 159
+          },
+          {
+            "fontSize": "23px",
+            "lineHeight": "31.74px",
+            "height": 159
+          }
+        ]
+      },
+      "tribalSlot": {
+        "width": 356,
+        "height": 254,
+        "crop": {
+          "left": 520,
+          "top": 36,
+          "width": 420,
+          "height": 300
+        }
+      },
+      "frames": 39,
+      "hasNetscapeLoop": false,
+      "removedFromMobile": [
+        "callout chip row",
+        "eyebrow metadata strip",
+        "multi-term secondary list"
+      ]
+    }
   }
 }

@@ -1,13 +1,49 @@
 {
   "locale": "es",
   "out": "assets/profile-final/es/mobile.gif",
-  "bytes": 1124657,
-  "mb": 1.073,
+  "bytes": 1586846,
+  "mb": 1.513,
   "width": 400,
-  "height": 859,
+  "height": 1224,
+  "typePrevious": {
+    "name": 22,
+    "role": 14,
+    "about": 14,
+    "stackValue": 14,
+    "section": 11,
+    "secondary": 9
+  },
+  "typeNew": {
+    "name": 30,
+    "role": 20,
+    "gac": 17,
+    "section": 17,
+    "about": 23,
+    "stackLabel": 17,
+    "stackValue": 22
+  },
+  "metrics": {
+    "rootH": 1224,
+    "tribalTop": 158,
+    "tribalLeft": 22,
+    "nameFs": "30px",
+    "roleFs": "20px",
+    "about": [
+      {
+        "fontSize": "23px",
+        "lineHeight": "31.74px",
+        "height": 159
+      },
+      {
+        "fontSize": "23px",
+        "lineHeight": "31.74px",
+        "height": 159
+      }
+    ]
+  },
   "tribalSlot": {
-    "width": 340,
-    "height": 243,
+    "width": 356,
+    "height": 254,
     "crop": {
       "left": 520,
       "top": 36,
@@ -17,5 +53,9 @@
   },
   "frames": 39,
   "hasNetscapeLoop": false,
-  "note": "Mobile-specific vertical layout; tribal cropped from desktop hero frames (animation algorithm unchanged); callouts shown as compact chip row for legibility."
+  "removedFromMobile": [
+    "callout chip row",
+    "eyebrow metadata strip",
+    "multi-term secondary list"
+  ]
 }
